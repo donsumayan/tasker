@@ -1,0 +1,25 @@
+{
+  "name": "todowebapp",
+  "description": "Web App interface for To-do List app",
+  "main": "index.js",
+  "authors": [
+    "Donraedel Sumayan"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ISR",
+    "Todo"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "^1.8.3",
+    "angular": "^1.5.8"
+  }
+}
