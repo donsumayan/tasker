@@ -1,13 +1,25 @@
-angular.module('todowebapp', ['ui.router'])
+(function() {
+    'use strict';
+    angular.module('todo', ['ui.router',
+        'ngMaterial',
+        'ngAnimate',
+        'ngMdIcons'
+        // 'todo.directives',
+        // 'todo.modules',
+        // 'todo.common'
+    ])
 
-.config(['$stateProvider', '$urlRouterProvider',
-    function($stateProvider, $urlRouterProvider) {
+    .config(mainConfig);
+
+    function mainConfig($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
-            .state('home', {
-                url: '/',
-                templateUrl: './templates/home.html'
+            .state('main-default', {
+                url:"/",
+                templateUrl: 'templates/home.html'
             });
+    }
 
-    }]);
+
+})();

@@ -1,1 +1,16 @@
-this is home
+<div layout-padding="10">
+    <div layout="row">
+        <div flex-10 class="sidenav">
+            <md-button type="button" name="button" class="addNote">
+                <i class="mdi mdi-plus-circle" aria-hidden="true"></i>
+            </md-button>
+
+        </div>
+        <div flex>
+            <div layout="column">
+                <div flex ui-view="header" class="header"></div>
+                <div flex ui-view="content" class="content"></div>
+            </div>
+        </div>
+    </div>
+</div>

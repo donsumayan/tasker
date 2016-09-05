@@ -17,7 +17,9 @@ var paths = {
     partials: ['app/**/*.html', '!app/index.html'],
     app: "./app/**",
     distDev: './dist.dev',
-    distProd: './dist.prod'
+    distProd: './dist.prod',
+    mdiFonts: './bower_components/mdi/fonts/**',
+    mdiSCSS: './bower_components/mdi/scss/**'
 };
 
 // === PIPE SEGMENTS === //
@@ -97,6 +99,16 @@ pipes.dev.processImages = function() {
     return gulp.src(paths.images)
         .pipe(gulp.dest(paths.distDev + '/images/'));
 };
+//copy mdi fonts to distDev
+pipes.dev.processMDIFonts = function() {
+    return gulp.src(paths.mdiFonts)
+        .pipe(gulp.dest(paths.distDev + '/fonts/'));
+};
+//copy mdi scss to distDev
+pipes.dev.processMDISCSSs = function() {
+    return gulp.src(paths.mdiSCSS)
+        .pipe(gulp.dest(paths.distDev + '/scss/'));
+};
 //build index for distDev
 pipes.dev.buildIndex = function() {
     var vendorScripts = pipes.dev.buildVendorScripts();
@@ -119,7 +131,9 @@ pipes.dev.buildIndex = function() {
 };
 
 pipes.dev.build = function() {
-    return es.merge(pipes.dev.buildIndex(), pipes.dev.buildPartials(), pipes.dev.processImages());
+    return es.merge(
+        pipes.dev.buildIndex(), pipes.dev.buildPartials(), pipes.dev.processImages(), pipes.dev.processMDISCSSs(), pipes.dev.processMDIFonts()
+    );
 };
 //delete distDev folder
 pipes.dev.clean = function() {
@@ -130,12 +144,21 @@ pipes.dev.clean = function() {
     return deferred.promise;
 };
 
-// PROD PIPES
-pipes.prod.clean = function() {
+pipes.dev.serve = function() {
 
 };
 
-// converts partials to javascript using html2js
+// PROD PIPES
+// TODO: clean
+pipes.prod.clean = function() {
+    var deferred = Q.defer();
+    del(paths.distProd, function() {
+        deferred.resolve();
+    });
+    return deferred.promise;
+};
+
+// TODO: converts partials to javascript using html2js
 pipes.prod.html2js = function() {
     return pipes.app.validatedPartialHtmls()
         .pipe(plugins.htmlhint.failReporter())
@@ -148,10 +171,12 @@ pipes.prod.html2js = function() {
         }));
 };
 
+// TODO: builds app for production
 pipes.prod.build = function() {
 
 };
 
+// TODO: runs app server for production
 pipes.runProd = function() {
 
 };
@@ -205,13 +230,14 @@ gulp.task('serve-dev', ["build-dev"], function() {
 });
 
 // === PRODUCTION TASKS === //
+// TODO: write code for production environment
 gulp.task('clean-prod', pipes.prod.clean);
 gulp.task('build-prod', pipes.prod.build);
-gulp.task('serve-prod', function () {
-  //start server
-  browserSync.init({
-      server: {
-          baseDir: "./dist.prod"
-      }
-  });
+gulp.task('serve-prod', function() {
+    //start server
+    browserSync.init({
+        server: {
+            baseDir: "./dist.prod"
+        }
+    });
 });

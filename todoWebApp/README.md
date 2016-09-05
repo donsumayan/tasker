@@ -13,4 +13,6 @@ You can run the dev-server by running either of these commands:
 1. "npm start" or
 2. "gulp serve-dev"
 
+*** prod-environment still under development
+
 --donsumayan
