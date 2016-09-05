@@ -3,23 +3,12 @@
     angular.module('todo', ['ui.router',
         'ngMaterial',
         'ngAnimate',
-        'ngMdIcons'
+        'ngMdIcons',
+        'todo.components'
         // 'todo.directives',
-        // 'todo.modules',
         // 'todo.common'
-    ])
+    ]);
 
-    .config(mainConfig);
-
-    function mainConfig($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/');
-
-        $stateProvider
-            .state('main-default', {
-                url:"/",
-                templateUrl: 'templates/home.html'
-            });
-    }
 
 
 })();
