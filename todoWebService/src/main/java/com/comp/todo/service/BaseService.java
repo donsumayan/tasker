@@ -52,7 +52,7 @@ public interface BaseService<E, K> {
 	 *            the key of the item to be deleted.
 	 * @return 1 if the operation was successful.
 	 */
-	public long removeByKey(K key);
+	public long removeById(K key);
 
 	/**
 	 * Calls the data access object and tells it to perform a retrieve operation

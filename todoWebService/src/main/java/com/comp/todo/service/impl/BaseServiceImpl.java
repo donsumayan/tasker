@@ -84,7 +84,7 @@ public abstract class BaseServiceImpl<E, K> implements BaseService<E, K> {
 	 */
 	@Override
 	@Transactional(propagation = Propagation.REQUIRED)
-	public long removeByKey(K key) {
+	public long removeById(K key) {
 		E entity = get(key);
 		return remove(entity);
 	}
