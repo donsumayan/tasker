@@ -55,7 +55,16 @@ public interface BaseDao<E, K> {
 	 * 
 	 * @param entity
 	 *            the item to be deleted.
-	 * @return
+	 * @return 1 if the operation was successful.
 	 */
 	public long delete(E entity);
+
+	/**
+	 * Delete an item with the given key from the database.
+	 * 
+	 * @param key
+	 *            the key of the item to be deleted.
+	 * @return 1 if the operation was successful.
+	 */
+	public long deleteByKey(K key);
 }

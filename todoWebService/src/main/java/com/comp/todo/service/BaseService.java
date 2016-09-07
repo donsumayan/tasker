@@ -45,6 +45,16 @@ public interface BaseService<E, K> {
 	public long remove(E entity);
 
 	/**
+	 * Calls the data access object and tells it to perform a delete operation
+	 * on an entity with the given key.
+	 * 
+	 * @param key
+	 *            the key of the item to be deleted.
+	 * @return 1 if the operation was successful.
+	 */
+	public long removeByKey(K key);
+
+	/**
 	 * Calls the data access object and tells it to perform a retrieve operation
 	 * on the given key.
 	 * 

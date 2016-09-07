@@ -98,12 +98,25 @@ public abstract class BaseDaoImpl<E, K extends Serializable> implements BaseDao<
 	 * 
 	 * @param entity
 	 *            the item to be deleted.
-	 * @return
+	 * @return 1 if the operation was successful.
 	 */
 	@Override
 	public long delete(E entity) {
 		sessionFactory.getCurrentSession().delete(entity);
 		return 1;
+	}
+
+	/**
+	 * Delete an item with the given key from the database.
+	 * 
+	 * @param key
+	 *            the id of the item to be deleted.
+	 * @return 1 if the operation was successful.
+	 */
+	@Override
+	public long deleteByKey(K key) {
+		E entity = get(key);
+		return delete(entity);
 	}
 
 	/**
