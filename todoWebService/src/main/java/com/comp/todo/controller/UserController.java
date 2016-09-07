@@ -40,7 +40,7 @@ public class UserController {
 	 * Saves a user into the database.
 	 * 
 	 * @param user
-	 *            the new user to be created.
+	 *            the new user to be saved.
 	 * @return 1 if the user is successfully saved.
 	 */
 	@RequestMapping(value = "", method = RequestMethod.POST)
@@ -80,7 +80,7 @@ public class UserController {
 	 * @return the user or null if it does not exist.
 	 */
 	@RequestMapping(value = "/{userId}", method = RequestMethod.GET)
-	public Object updateUser(@PathVariable Long userId) {
+	public Object getUser(@PathVariable Long userId) {
 		return userService.get(userId);
 	}
 
