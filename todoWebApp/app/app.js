@@ -1,3 +1,4 @@
+// Main App module
 (function() {
     'use strict';
     angular.module('todo', ['ui.router',
@@ -5,10 +6,5 @@
         'ngAnimate',
         'ngMdIcons',
         'todo.components'
-        // 'todo.directives',
-        // 'todo.common'
     ]);
-
-
-
 })();

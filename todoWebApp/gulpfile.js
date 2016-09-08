@@ -14,13 +14,15 @@ var paths = {
     styles: ['./app/**/*.css', './app/**/*.scss'],
     images: './images/**/*',
     index: './app/index.html',
-    partials: ['app/**/*.html', '!app/index.html'],
+    partials: ['app/**/*tmpl.html', '!app/index.html'],
     app: "./app/**",
     distDev: './dist.dev',
     distProd: './dist.prod',
-    mdiFonts: './bower_components/mdi/fonts/**',
-    mdiSCSS: './bower_components/mdi/scss/**'
+    distScriptsProd: './dist.prod/scripts',
+    fontAwesome: './app/assets/fontAwesome/**',
 };
+
+var vendorScriptsOrder = ['jquery.js', 'angular.js'];
 
 // === PIPE SEGMENTS === //
 var pipes = {};
@@ -59,6 +61,10 @@ pipes.app.validatePartialHtmls = function() {
         .pipe(plugins.htmlhint.reporter());
 };
 
+pipes.app.orderedVendorScripts = function() {
+    return plugins.order(vendorScriptsOrder);
+};
+
 // == DEV PIPES == //
 
 //validate all partial html and copy to distDev
@@ -70,8 +76,8 @@ pipes.dev.buildPartialHtmls = function() {
 // copy and order all bower components to distDev
 pipes.dev.buildVendorScripts = function() {
     return gulp.src(bowerFiles())
-        .pipe(gulp.dest('dist.dev/bower_components'))
-        .pipe(plugins.order(['jquery.js', 'angular.js']));
+        .pipe(plugins.order(['jquery.js', 'angular.js']))
+        .pipe(gulp.dest('dist.dev/bower_components'));
 };
 
 // build ordered app scripts to distDev
@@ -100,14 +106,9 @@ pipes.dev.processImages = function() {
         .pipe(gulp.dest(paths.distDev + '/images/'));
 };
 //copy mdi fonts to distDev
-pipes.dev.processMDIFonts = function() {
-    return gulp.src(paths.mdiFonts)
+pipes.dev.processFontAwesome = function() {
+    return gulp.src(paths.fontAwesome)
         .pipe(gulp.dest(paths.distDev + '/fonts/'));
-};
-//copy mdi scss to distDev
-pipes.dev.processMDISCSSs = function() {
-    return gulp.src(paths.mdiSCSS)
-        .pipe(gulp.dest(paths.distDev + '/scss/'));
 };
 //build index for distDev
 pipes.dev.buildIndex = function() {
@@ -132,7 +133,7 @@ pipes.dev.buildIndex = function() {
 
 pipes.dev.build = function() {
     return es.merge(
-        pipes.dev.buildIndex(), pipes.dev.buildPartials(), pipes.dev.processImages(), pipes.dev.processMDISCSSs(), pipes.dev.processMDIFonts()
+        pipes.dev.buildIndex(), pipes.dev.buildPartials(), pipes.dev.processImages(), pipes.dev.processFontAwesome()
     );
 };
 //delete distDev folder
@@ -158,6 +159,14 @@ pipes.prod.clean = function() {
     return deferred.promise;
 };
 
+pipes.prod.buildVendorScripts = function() {
+    return gulp.src(bowerFiles('**/*.js'))
+        .pipe(pipes.orderedVendorScripts())
+        .pipe(plugins.concat('vendor.min.js'))
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest(paths.distScriptsProd));
+};
+
 // TODO: converts partials to javascript using html2js
 pipes.prod.html2js = function() {
     return pipes.app.validatedPartialHtmls()
@@ -167,7 +176,7 @@ pipes.prod.html2js = function() {
             removeComments: true
         }))
         .pipe(plugins.ngHtml2js({
-            moduleName: pkg.name
+            moduleName: "partialTmpls"
         }));
 };
 
@@ -231,6 +240,39 @@ gulp.task('serve-dev', ["build-dev"], function() {
 
 // === PRODUCTION TASKS === //
 // TODO: write code for production environment
+gulp.task('build-vendor-scripts-prod', function() {
+    return gulp.src(bowerFiles('**/*.js'))
+        .pipe(pipes.app.orderedVendorScripts())
+        .pipe(plugins.uglify())
+        .pipe(plugins.concat('vendor.min.js'))
+        .pipe(gulp.dest(paths.distScriptsProd));
+});
+
+pipes.app.htlmtojs = function () {
+    return pipes.app.validatePartialHtmls()
+        .pipe(plugins.htmlhint.failReporter())
+        .pipe(plugins.htmlmin({
+            collapseWhitespace: true,
+            removeComments: true
+        }))
+        .pipe(plugins.ngHtml2js({
+            moduleName: "todoPartials"
+        }));
+};
+
+gulp.task('build-app-scripts-prod', function() {
+    var scriptedPartials = pipes.app.htlmtojs();
+    var validatedAppScripts = pipes.app.validateScripts();
+
+    return es.merge(scriptedPartials, validatedAppScripts)
+        .pipe(pipes.orderedAppScripts())
+        .pipe(plugins.sourcemaps.init())
+        .pipe(plugins.concat('app.min.js'))
+        .pipe(plugins.uglify())
+        .pipe(plugins.sourcemaps.write())
+        .pipe(gulp.dest(paths.distScriptsProd));
+});
+
 gulp.task('clean-prod', pipes.prod.clean);
 gulp.task('build-prod', pipes.prod.build);
 gulp.task('serve-prod', function() {

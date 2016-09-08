@@ -1,29 +1,25 @@
+// Home component configuration
 (function() {
     'use strict';
     angular
-        .module('todo.components.home')
-        .config(homeConfig);
+        .module('todo.components.content')
+        .config(contentConfig);
 
-    function homeConfig($stateProvider, $urlRouterProvider) {
+    function contentConfig($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
             .state('main-default.home', {
                 url: '/',
                 views: {
-                    sidebar: {
-                        templateUrl: 'scripts/components/_common/sidebar/sidebar.tmpl.html',
-                        controller: 'sidebarController',
-                        controllerAs:'vm'
-                    },
                     header: {
                         templateUrl: 'scripts/components/_common/header/header.tmpl.html',
                         controller: 'headerController',
                         controllerAs:'vm'
                     },
                     content: {
-                        templateUrl: 'scripts/components/home/home.tmpl.html',
-                        controller: 'homeController',
+                        templateUrl: 'scripts/components/content/content.tmpl.html',
+                        controller: 'contentController',
                         controllerAs:'vm'
                     }
                 }

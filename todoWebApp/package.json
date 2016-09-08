@@ -1,7 +1,7 @@
 {
-  "name": "todowebapp",
+  "name": "todoapp",
   "version": "1.0.0",
-  "description": "WebApp interface for To-do list app",
+  "description": "a todoapp",
   "main": "index.js",
   "scripts": {
     "postinstall": "bower install",
@@ -10,7 +10,6 @@
     "start": "gulp serve-dev"
   },
   "keywords": [
-    "ISR",
     "Todo"
   ],
   "author": "Donraedel Sumayan",
@@ -21,12 +20,16 @@
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
     "gulp-angular-filesort": "^1.1.1",
+    "gulp-concat": "^2.6.0",
     "gulp-htmlhint": "^0.3.1",
+    "gulp-htmlmin": "^2.0.0",
     "gulp-inject": "^4.1.0",
     "gulp-jshint": "^2.0.1",
     "gulp-load-plugins": "^1.2.4",
+    "gulp-ng-html2js": "^0.2.2",
     "gulp-order": "^1.1.1",
     "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.2.1",
     "main-bower-files": "^2.13.1",

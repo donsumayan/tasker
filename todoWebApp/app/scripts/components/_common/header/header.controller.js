@@ -1,3 +1,4 @@
+// Header module controller
 (function() {
     'use strict';
     angular
@@ -5,10 +6,12 @@
         .controller('headerController', headerController);
 
     function headerController($scope, $element, $compile) {
-      var vm=this;
-
-      vm.message="this is the header";
-
+        var vm = this;
+        vm.header = "Tasker";
+        var user = {
+            name: "don"
+        }
+        // vm.user = user;
     }
 
 })();

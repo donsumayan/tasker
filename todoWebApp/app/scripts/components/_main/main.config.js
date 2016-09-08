@@ -1,3 +1,4 @@
+// Main App configuration
 (function () {
   angular
       .module("todo")
@@ -9,7 +10,7 @@
           $stateProvider
               .state('main-default', {
                   abstract: true,
-                  templateUrl: 'scripts/components/default/default.tmpl.html'
+                  templateUrl: 'scripts/components/_main/main.tmpl.html'
               });
       }
 })();

@@ -1,24 +1,22 @@
+// Sidebar module controller
 (function() {
     'use strict';
     angular
         .module('todo.components.common.sidebar')
         .controller('sidebarController', sidebarController);
 
-    function sidebarController($scope, $element, $compile, $mdDialog) {
+    function sidebarController($scope, $element, $compile) {
         var vm = this;
-        vm.showAdvanced = function(ev) {
-            $mdDialog.show({
-                    templateUrl: 'scripts/components/_common/sidebar/sidebar.tmpl.html',
-                    parent: angular.element(document.body),
-                    targetEvent: ev,
-                    clickOutsideToClose: true,
-                    fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
-                })
-                .then(function(answer) {
-                    $scope.status = 'You said the information was "' + answer + '".';
-                }, function() {
-                    $scope.status = 'You cancelled the dialog.';
-                });
+
+        vm.addNote = function ($scope) {
+            // loremipsum.getContent().then(
+            //     function (data) {
+            //         console.log(data);
+            //         var divElement = angular.element(document.querySelector('.content'));
+            //         var appendHtml = $compile('<div flex>'+data+'</div>')($scope);
+            //         divElement.append(appendHtml);
+            //     }
+            // );
         };
     }
 

@@ -1,1 +1,6 @@
-{{vm.message}}
+<div class="title" flex>
+  <span>{{vm.header}}</span>
+</div>
+<div class="user" flex="40" layout layout-align="end end">
+    <span>{{vm.user? vm.user.name:'Login'}} <i class="fa fa-user" aria-hidden="true"></i></span>
+</div>

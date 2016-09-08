@@ -1,3 +1,4 @@
+// Header module declaration
 (function(){
   'use strict';
   angular

@@ -1,18 +1,94 @@
-.sidebar{
-  height:94vh;
-  // background: gray;
-  border-right: 5px solid #7E9874;
+@import 'https://fonts.googleapis.com/css?family=Raleway'; //pallete
+$cp1: #33291f;
+$cp2: #adb2a4;
+$cp3: #dae1dd;
+$cp4: #e8d1c0;
+$cp5: #eed9bd;
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: $cp1;
+    background: url('../images/background.jpg');
+    background-size: 100%;
 }
 
-.addNote{
-  display: block;
-  color: #7E9874;
-  font-size:100px;
+.header {
+    height: 8vh;
+    background: $cp2;
+
+    .user {
+        margin-right: 20px;
+
+        span {
+            padding: 0 10px;
+            cursor: pointer;
+        }
+
+        i {
+            font-size: 1.1em;
+            padding: 0 2px;
+        }
+
+        span:hover {
+            color: white;
+        }
+    }
 }
 
-#header{
-  height:20;
-  align-content: #f0f0f0;
-}
-div{
+.content {
+    background: rgba(218, 225, 221, 0.2);
+    height: 92vh;
+    overflow-y: auto;
+
+    div:focus,
+    span:focus {
+        outline: none;
+    }
+
+    .board {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .tools {
+        margin-top:10px;
+        margin-bottom:10px;
+        .addTask {
+            cursor: pointer;
+        }
+
+        span.ng-hide {
+            transition: 0.2s linear transform;
+            transform: translateX(-30px);
+        }
+    }
+
+    .card {
+        background: white;
+        box-shadow: 1px 1px 10px #adb2a4;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .card.ng-enter {
+        transition: 0.2s linear opacity;
+        opacity: 0;
+    }
+
+    .card.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+
+    .noTask {
+        text-shadow: 1px 1px 10px #adb2a4;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 18px;
+        margin: auto;
+    }
+
+    .noTask.ng-hide {
+        transition: 0.2s linear opacity;
+        opacity: 0;
+    }
 }

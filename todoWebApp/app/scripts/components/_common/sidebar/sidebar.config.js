@@ -1,3 +1,4 @@
+// Sidebar module configuration
 (function() {
     'use strict';
     angular

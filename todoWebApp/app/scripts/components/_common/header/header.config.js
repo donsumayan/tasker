@@ -1,3 +1,4 @@
+// Header module configuration
 (function() {
     'use strict';
     angular
