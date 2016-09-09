@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Model for a todo.
  * 
@@ -26,14 +28,11 @@ public class Todo {
 	@Column(name = "id", nullable = false)
 	private long id;
 
-	@Column(name = "title", nullable = false)
-	private String title;
-
 	@Column(name = "note", nullable = false)
 	private String note;
 
-	@Column(name = "due_date", nullable = false)
-	private Date dueDate;
+	@Column(name = "is_done", nullable = false)
+	private Boolean isDone;
 
 	@Column(name = "date_created", nullable = false)
 	private Date dateCreated;
@@ -41,7 +40,8 @@ public class Todo {
 	@Column(name = "date_updated", nullable = false)
 	private Date dateUpdated;
 
-	@ManyToOne(fetch = FetchType.EAGER)
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_id")
 	private User user;
 
@@ -53,14 +53,6 @@ public class Todo {
 		this.id = id;
 	}
 
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
 	public String getNote() {
 		return note;
 	}
@@ -69,12 +61,12 @@ public class Todo {
 		this.note = note;
 	}
 
-	public Date getDueDate() {
-		return dueDate;
+	public Boolean getIsDone() {
+		return isDone;
 	}
 
-	public void setDueDate(Date dueDate) {
-		this.dueDate = dueDate;
+	public void setIsDone(Boolean isDone) {
+		this.isDone = isDone;
 	}
 
 	public Date getDateCreated() {
