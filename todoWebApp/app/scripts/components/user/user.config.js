@@ -2,15 +2,15 @@
 (function() {
     'use strict';
     angular
-        .module('todo.components.content')
-        .config(contentConfig);
+        .module('todo.components.user')
+        .config(userConfig);
 
-    function contentConfig($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/');
+    function userConfig($stateProvider, $urlRouterProvider) {
+        // $urlRouterProvider.otherwise('/');
 
         $stateProvider
-            .state('main-default.home', {
-                url: '/dashboard',
+            .state('main-default.user', {
+                url: '/user',
                 views: {
                     header: {
                         templateUrl: 'scripts/components/_common/header/header.tmpl.html',
@@ -18,8 +18,8 @@
                         controllerAs:'vm'
                     },
                     content: {
-                        templateUrl: 'scripts/components/content/content.tmpl.html',
-                        controller: 'contentController',
+                        templateUrl: 'scripts/components/user/user.tmpl.html',
+                        controller: 'userController',
                         controllerAs:'vm'
                     }
                 }

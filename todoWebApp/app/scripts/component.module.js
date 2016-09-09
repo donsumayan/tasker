@@ -6,7 +6,8 @@
             'todo.components.common',
             'todo.components.services',
             'todo.components.directives',
-            'todo.components.content'
+            'todo.components.content',
+            'todo.components.user'
         ]);
 
 })();

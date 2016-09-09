@@ -5,7 +5,7 @@
       .config(appConfig);
 
       function appConfig($stateProvider, $urlRouterProvider) {
-          $urlRouterProvider.otherwise('/');
+          $urlRouterProvider.otherwise('/dashboard');
 
           $stateProvider
               .state('main-default', {

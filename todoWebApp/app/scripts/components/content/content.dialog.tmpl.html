@@ -1,15 +1,7 @@
 <md-content layout="column" layout-padding>
-    <div class="" flex>
-        <md-datepicker ng-model="vm.birthday"></md-datepicker>
-
-    </div>
-    <div class="" flex>
-        <md-input-container>
-            <label>Color</label>
-            <textarea ng-model="vm.biography" md-maxlength="150" rows="5" md-select-on-focus></textarea>
-        </md-input-container>
-    </div>
-    <div class="" flex>
-        <md-button type="button" name="button">Add Note</md-button>
-    </div>
+    <md-input-container flex="40">
+        <label>Note</label>
+        <textarea ng-model="vm.note" rows="5" md-select-on-focus></textarea>
+    </md-input-container>
+    <button type="button" name="button" ng-click="vm.addNote($event)">addNote</button>
 </md-content>

@@ -1,20 +1,75 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway'; //pallete
-$cp1: #33291f;
-$cp2: #adb2a4;
-$cp3: #dae1dd;
-$cp4: #e8d1c0;
-$cp5: #eed9bd;
+$cp1: rgba(12, 25, 21, 1);
+$cp2: rgba(81, 122, 139, 1);
+$cp3: rgba(181, 174, 143, 1);
+$cp4: rgba(252, 214, 139, 1);
+$cp5: rgba(255, 230, 131, 1);
 
 body {
     font-family: 'Raleway', sans-serif;
-    color: $cp1;
-    background: url('../images/background.jpg');
-    background-size: 100%;
+}
+
+a,
+a:focus,
+a:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 .header {
-    height: 8vh;
-    background: $cp2;
+    box-shadow: 0px 0px 10px $cp2;
+    .mainHeader,
+    .subHeader {
+        padding: 10px;
+
+        span {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    }
+
+    .mainHeader {
+        span {
+            font-size: 1.2em;
+            padding: 0 10px;
+        }
+
+        .logo {
+            span {
+                font-size: 1.5em;
+            }
+        }
+        .menu {
+            span {
+                font-size: 1.2em;
+            }
+
+            .selected,
+            span:hover {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-top: 5px solid #517a8b;
+                border-bottom: 16px solid #517a8b;
+                background: #517a8b;
+                color: white;
+            }
+        }
+        .user {
+          text-align: right;
+        }
+    }
+
+    .subHeader {
+        background: $cp2;
+        padding: 20px 40px;
+
+        .subMenu {
+            span {
+                font-size: 1.2em;
+                padding: 0 20px;
+            }
+        }
+    }
 
     .user {
         margin-right: 20px;
@@ -22,6 +77,7 @@ body {
         span {
             padding: 0 10px;
             cursor: pointer;
+            user-select: none;
         }
 
         i {
@@ -30,65 +86,135 @@ body {
         }
 
         span:hover {
-            color: white;
+            text-shadow: 0 0 10px $cp1;
         }
     }
 }
 
 .content {
-    background: rgba(218, 225, 221, 0.2);
-    height: 92vh;
-    overflow-y: auto;
-
     div:focus,
     span:focus {
         outline: none;
     }
 
-    .board {
+    .board,
+    .userView {
         margin-right: auto;
         margin-left: auto;
+        border-radius: 2px;
     }
 
-    .tools {
-        margin-top:10px;
-        margin-bottom:10px;
-        .addTask {
-            cursor: pointer;
+    .board {
+        md-grid-list.ng-hide {
+            transition: opacity 0.2s;
+            opacity: 0;
         }
 
-        span.ng-hide {
-            transition: 0.2s linear transform;
-            transform: translateX(-30px);
+        md-grid-list.ng-enter {
+            transition: opacity 0.2s;
+            opacity: 0;
+        }
+
+        .todo {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 10px $cp2;
+            padding: 10px 10px;
+            font-size:22px;
+            .status{
+              text-align: center;
+            }
+            .note{
+              word-wrap: break-word;
+            }
+            .addTask {
+                cursor: pointer;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            .addTask:hover,i:hover {
+                text-shadow: 0 0 10px $cp1;
+            }
+            button{
+              background: none;
+              border:none;
+            }
+
+        }
+
+        .todo.ng-enter {
+            transition: transform 0.2s, opacity 0.2s;
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        .todo.ng-enter.ng-enter-active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .todo.ng-leave {
+            transition: transform 0.3s, opacity 0.2s;
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+        .todo.ng-leave.ng-leave-active {
+            opacity: 0;
+            transform: translateX(50px);
         }
     }
 
-    .card {
-        background: white;
-        box-shadow: 1px 1px 10px #adb2a4;
-        margin-top: 2px;
-        margin-bottom: 2px;
+    .userView {
+        .userHeader {
+            background: $cp2;
+            border-radius: 2px;
+            border: 1px solid $cp2;
+            font-size: 2em;
+            font-weight: bold;
+        }
     }
+}
 
-    .card.ng-enter {
-        transition: 0.2s linear opacity;
-        opacity: 0;
-    }
+.content.ng-enter {
+    transition: opacity 0.2s;
+    opacity: 0;
+}
 
-    .card.ng-enter.ng-enter-active {
-        opacity: 1;
-    }
+.content.ng-enter.ng-enter-active {
+    opacity: 1;
+}
 
-    .noTask {
-        text-shadow: 1px 1px 10px #adb2a4;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 18px;
-        margin: auto;
-    }
+.content.ng-leave {
+    transition: opacity 0.2s;
+    opacity: 1;
+}
 
-    .noTask.ng-hide {
-        transition: 0.2s linear opacity;
-        opacity: 0;
+.content.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.editable-click:hover,
+a.editable-click:hover {
+    text-decoration: none;
+    color: $cp5;
+    border-bottom-color: none;
+}
+
+.editable-wrap {
+    width: 99%;
+    height: 98%;
+    border: none;
+
+    span {
+        textarea {
+            width: 98.7%;
+            height: 100%;
+        }
     }
+}
+
+.editable-wrap:focus,
+.editable-wrap:hover,i:focus,span:focus,div:focus {
+    outline: none !important;
 }

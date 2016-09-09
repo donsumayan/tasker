@@ -1,14 +1,40 @@
 <div flex="80" class="board">
-    <div class="tools" >
-      <span ng-click="vm.addNote($event)" class="addTask">
-        <i class="fa fa-plus" aria-hidden="true"></i>
-        add a new task
-      </span>
+    <div layout="column">
+        <div class="todo" flex ng-repeat="todo in vm.todos">
+            <div layout="row">
+                <div flex ng-show="todo.note==='Add Note'" class="addTask">
+                    <span ng-click="vm.editNewNote(eform,$index)">
+                      <i class="fa fa-plus" aria-hidden="true"></i>
+                      ADD NEW NOTE
+                    </span>
+                </div>
+                <div class="status" flex="10" ng-show="todo.note!=='Add Note'">
+
+                    <i class="fa fa-check-square-o" ng-click="todo.isDone=false" ng-show="todo.isDone" aria-hidden="true"></i>
+                    <i class="fa fa-square-o" ng-click="todo.isDone=true" ng-show="!todo.isDone" aria-hidden="true"></i>
+
+                </div>
+                <div flex ng-show="todo.note!=='Add Note'" class="note">
+                    <span editable-text="todo.note" e-form="eform" onbeforesave="vm.addNote()" buttons="no">
+                      {{todo.note||"edit note"}}
+                    </span>
+                </div>
+                <div flex="10" ng-show="todo.note!=='Add Note'">
+
+                      <form editable-form name="eform" onbeforesave="v" layout layout-align="space-around center">
+                        <button type="submit" ng-show="eform.$visible" ng-disabled="eform.$waiting" class="btn btn-primary">
+                          <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" ng-show="eform.$visible" ng-disabled="eform.$waiting" ng-click="eform.$cancel()" class="btn btn-default">
+                          <i class="fa fa-times-circle" aria-hidden="true"></i>
+                        </button>
+                        <i class="fa fa-edit" ng-hide="eform.$visible" ng-click="eform.$show()"  aria-hidden="true"></i>
+                        <i class="fa fa-times-circle" ng-hide="eform.$visible" ng-click="vm.removeNote($index)"  aria-hidden="true"></i>
+
+                      </form>
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="noTask" ng-show="!vm.tasks.length">There are no tasks to display</div>
-    <md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-gutter="1em" md-row-height="1:1">
-        <md-grid-tile class="card" ng-repeat="task in vm.tasks">
-            <a href="" ng-click="">{{task.todo}}</a>
-        </md-grid-tile>
-    </md-grid-list>
 </div>

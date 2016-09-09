@@ -5,42 +5,41 @@
         .module('todo.components.content')
         .controller('contentController', contentController);
 
-    function contentController($scope, $mdDialog) {
+    function contentController($scope, $mdDialog, todoservice) {
         var vm = this;
         vm.cols = 3;
-        vm.tasks = [];
-
-        vm.content = "Loading data...";
-
-        vm.addNote = function(evt) {
-
-            // if (evt.code === "Enter") {
-                console.log();
-                vm.tasks.push({
-                    todo:vm.newTodo ? vm.newTodo:"none"
-                });
-                vm.newTodo = "";
-            // }
-            console.log("tasks: "+vm.tasks.length);
-            // return todo;
+        vm.todos = todoservice.getTodos();
+        vm.todos.push({
+            "id": 1,
+            "title": null,
+            "note": "Add Note",
+            "isDone": null
+        });
+        vm.removeNote = function(index) {
+            vm.todos.splice(index, 1);
+            addNote();
         };
-        vm.something = "this is something";
-        vm.addDialog = function(ev) {
-            // $mdDialog.show({
-            //         controller: 'contentController',
-            //         controllerAs:'vm',
-            //         templateUrl: 'scripts/components/content/content.dialog.tmpl.html',
-            //         parent: angular.element(document.body),
-            //         targetEvent: ev,
-            //         clickOutsideToClose: true,
-            //         fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
-            //     })
-            //     .then(function(answer) {
-            //         $scope.status = 'You said the information was "' + answer + '".';
-            //     }, function() {
-            //         $scope.status = 'You cancelled the dialog.';
-            //     });
-        };
+        vm.addNote = function() {
+            addNote();
+            console.log(vm.todos);
+        }
+        vm.editNewNote = function (eform,index) {
+          vm.todos[index].note = '';
+          eform.$show();
+          addNote();
+        }
+        vm.saveEdit =function (eform,index) {
+          console.log(eform);
+        }
+        function addNote(){
+          if (_.last(vm.todos).note !== "Add Note") {
+              vm.todos.push({
+                  "note": "Add Note"
+              });
+          }
+        }
+
+
     }
 
 })();

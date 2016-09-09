@@ -4,7 +4,8 @@
     angular.module('todo', ['ui.router',
         'ngMaterial',
         'ngAnimate',
-        'ngMdIcons',
+        'ui.bootstrap',
+        'xeditable',
         'todo.components'
     ]);
 })();
