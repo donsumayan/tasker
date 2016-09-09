@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.comp.todo.dao.BaseDao;
+import com.comp.todo.dao.UserDao;
 import com.comp.todo.model.User;
 import com.comp.todo.service.UserService;
 
@@ -19,6 +20,13 @@ import com.comp.todo.service.UserService;
 @Service
 @Transactional
 public class UserServiceImpl extends BaseServiceImpl<User, Long> implements UserService {
+
+	/**
+	 * Data access object for users.
+	 */
+	@Autowired
+	private UserDao userDao;
+
 	public UserServiceImpl() {
 
 	}
@@ -27,4 +35,10 @@ public class UserServiceImpl extends BaseServiceImpl<User, Long> implements User
 	public UserServiceImpl(@Qualifier("userDaoImpl") BaseDao<User, Long> baseDao) {
 		super(baseDao);
 	}
+
+	@Override
+	public Long deleteAllUsers() {
+		return userDao.deleteAll();
+	}
+
 }

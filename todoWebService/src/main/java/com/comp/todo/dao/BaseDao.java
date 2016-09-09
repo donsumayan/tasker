@@ -51,7 +51,7 @@ public interface BaseDao<E, K> {
 	public long saveOrUpdate(E entity);
 
 	/**
-	 * Delete the item from database.
+	 * Deletes the item from database.
 	 * 
 	 * @param entity
 	 *            the item to be deleted.
@@ -60,11 +60,19 @@ public interface BaseDao<E, K> {
 	public long delete(E entity);
 
 	/**
-	 * Delete an item with the given key from the database.
+	 * Deletes an item with the given key from the database.
 	 * 
 	 * @param key
 	 *            the key of the item to be deleted.
 	 * @return 1 if the operation was successful.
 	 */
 	public long deleteByKey(K key);
+
+	/**
+	 * Deletes all items with the given entity class.
+	 * 
+	 * @return the number of records deleted.
+	 */
+	public long deleteAll();
+
 }

@@ -10,5 +10,11 @@ import com.comp.todo.model.User;
  *
  */
 public interface UserService extends BaseService<User, Long> {
-
+	/**
+	 * Calls the data access object and tells it to delete all users in the
+	 * database.
+	 * 
+	 * @return the number of users records deleted if successful.
+	 */
+	public Long deleteAllUsers();
 }

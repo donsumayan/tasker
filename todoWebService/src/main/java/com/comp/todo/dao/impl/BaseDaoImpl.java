@@ -120,6 +120,16 @@ public abstract class BaseDaoImpl<E, K extends Serializable> implements BaseDao<
 	}
 
 	/**
+	 * Deletes all items with the given entity class.
+	 * 
+	 * @return the number of records deleted.
+	 */
+	public long deleteAll() {
+		return sessionFactory.getCurrentSession().createQuery("DELETE FROM " + this.entityClass.getName())
+				.executeUpdate();
+	}
+
+	/**
 	 * @return the sessionFactory
 	 */
 	public SessionFactory getSessionFactory() {
