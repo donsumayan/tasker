@@ -22,10 +22,10 @@
                 <div flex="10" ng-show="todo.note!=='Add Note'">
 
                       <form editable-form name="eform" onbeforesave="v" layout layout-align="space-around center">
-                        <button type="submit" ng-show="eform.$visible" ng-disabled="eform.$waiting" class="btn btn-primary">
+                        <button type="submit" ng-show="eform.$visible" ng-disabled="eform.$waiting" class="saveBtn">
                           <i class="fa fa-floppy-o" aria-hidden="true"></i>
                         </button>
-                        <button type="button" ng-show="eform.$visible" ng-disabled="eform.$waiting" ng-click="eform.$cancel()" class="btn btn-default">
+                        <button type="button" ng-show="eform.$visible" ng-disabled="eform.$waiting" ng-click="eform.$cancel()">
                           <i class="fa fa-times-circle" aria-hidden="true"></i>
                         </button>
                         <i class="fa fa-edit" ng-hide="eform.$visible" ng-click="eform.$show()"  aria-hidden="true"></i>

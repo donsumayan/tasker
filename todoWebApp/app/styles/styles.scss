@@ -17,7 +17,8 @@ a:hover {
 }
 
 .header {
-    box-shadow: 0px 0px 10px $cp2;
+    box-shadow: 0 0 10px $cp2;
+
     .mainHeader,
     .subHeader {
         padding: 10px;
@@ -39,6 +40,7 @@ a:hover {
                 font-size: 1.5em;
             }
         }
+
         .menu {
             span {
                 font-size: 1.2em;
@@ -54,8 +56,9 @@ a:hover {
                 color: white;
             }
         }
+
         .user {
-          text-align: right;
+            text-align: right;
         }
     }
 
@@ -118,60 +121,103 @@ a:hover {
         .todo {
             margin-top: 10px;
             margin-bottom: 10px;
-            box-shadow: 0px 0px 10px $cp2;
-            padding: 10px 10px;
-            font-size:22px;
-            .status{
-              text-align: center;
+            padding: 10px;
+            font-size: 22px;
+            border: 1px solid #517a8b;
+            border-radius: 5px;
+
+            .status {
+                text-align: center;
             }
-            .note{
-              word-wrap: break-word;
+
+            .note {
+                word-wrap: break-word;
             }
+
             .addTask {
                 cursor: pointer;
                 text-transform: uppercase;
                 text-align: center;
             }
-            .addTask:hover,i:hover {
+
+            .addTask:hover,
+            i:hover {
                 text-shadow: 0 0 10px $cp1;
             }
-            button{
-              background: none;
-              border:none;
+
+            button {
+                background: none;
+                border: none;
             }
-
         }
-
         .todo.ng-enter {
             transition: transform 0.2s, opacity 0.2s;
             opacity: 0;
             transform: translateX(50px);
         }
-
         .todo.ng-enter.ng-enter-active {
             opacity: 1;
             transform: translateX(0);
         }
-
         .todo.ng-leave {
             transition: transform 0.3s, opacity 0.2s;
             opacity: 1;
             transform: translateX(0px);
         }
-
         .todo.ng-leave.ng-leave-active {
             opacity: 0;
             transform: translateX(50px);
         }
     }
 
+    .saveBtn{
+      text-shadow: 0px 0px 10px $cp2;
+    }
     .userView {
+        .userDetails,
         .userHeader {
-            background: $cp2;
-            border-radius: 2px;
+            border-radius: 5px;
             border: 1px solid $cp2;
-            font-size: 2em;
             font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .userHeader {
+            font-size: 2.2em;
+            background: $cp2;
+        }
+
+        .userDetails {
+            background: none;
+
+            .userDetailsEmail,
+            .userDetailsHead,
+            .userDetailsId,
+            .userDetailsName {
+                padding: 5px 0;
+            }
+
+            .label {
+                text-align: right;
+                font-size: 0.7em;
+            }
+            .details{
+                text-indent: 10px;
+                font-size: 1.2em;
+                font-weight: normal;
+            }
+
+            .userEdit {
+                float: right;
+            }
+
+            .userEdit:hover {
+                text-shadow: 0 0 10px $cp2;
+            }
+
+            .userDetailsEmail {
+                text-transform: none;
+            }
         }
     }
 }
@@ -215,6 +261,19 @@ a.editable-click:hover {
 }
 
 .editable-wrap:focus,
-.editable-wrap:hover,i:focus,span:focus,div:focus {
+.editable-wrap:hover,
+div:focus,
+i:focus,
+span:focus {
     outline: none !important;
+}
+
+select, button, textarea, input {
+    font-size: inherit;
+    font-family: inherit;
+    background: rgba(181, 174, 143, 0.2);
+    border-radius: 2px; 
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
 }

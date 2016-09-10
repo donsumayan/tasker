@@ -5,26 +5,39 @@
         .module('todo.components.common.header')
         .controller('headerController', headerController);
 
-    function headerController($scope,userservice) {
+    function headerController($scope, $location, userservice) {
         var vm = this;
         vm.header = "Tasker";
         vm.user = userservice.getUser();
-        vm.menus= [ "My Todo's", "My Account"];
+        vm.menus = [{
+            title: "My Todo's",
+            sref: "main-default.home",
+            subs: ["All", "Done", "Pending"]
+        }, {
+            title: "My Account",
+            sref: "main-default.user",
+            subs: ["All", "Done", "Pending"]
+        }];
         vm.selected = vm.menus[0];
-        vm.subMenus = ["Pending","Done"];
+        vm.subMenus = ["All", "Done", "Pending"];
 
-        vm.switchView = function (menu) {
-          if(vm.selected==="My Todo's"){
-            vm.subMenus= ["Pending","Done"];
-            // $window.location.href= "/#/dashboard";
-          }
-          else{
-            vm.subMenus=  ["Information","Delete Account"];
-            // $window.location.href= "/#/user";
-          }
-            vm.selected=menu;
-        }
-        // vm.user = user;
+        vm.switchView = function(view) {
+                $location.path(view)
+                switch (view) {
+                    case vm.menus[0].title:
+                        vm.selected = vm.menus[0];
+                        console.log("selected view :"+vm.selected);
+                        break;
+                    case vm.menus[1].title:
+                        vm.selected = vm.menus[1];
+                        console.log("selected view :"+vm.selected);
+                        break;
+                    default:
+                        console.log('default');
+                        break;
+                }
+            }
+            // vm.user = user;
     }
 
 })();

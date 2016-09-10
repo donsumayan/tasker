@@ -13,15 +13,11 @@
 
         function user() {
             var user = {
-                "id": 1,
-                "firstName": "Don",
-                "lastName": "Sumayan",
+                "id":1,
+                "first_name": "don",
+                "last_name": "sumayan",
                 "email": "don.sumayan@gmail.com",
-                "password": "",
-                "role": {
-                    "id": 1,
-                    "name": "user"
-                }
+                "role_id": "1"
             };
 
             return user;

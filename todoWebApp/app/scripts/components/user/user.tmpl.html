@@ -1,8 +1,39 @@
 <div flex="80" class="userView">
-  <div layout="column" layout-padding="10" layout-margin="5">
-    <div flex class="userHeader">
-      <span>{{vm.user.firstName}} {{vm.user.lastName}}</span>
-    </div>
-  </div>
+    <div layout="column" layout-padding="10" layout-margin="5">
+        <div flex class="userHeader">
+            <span>{{vm.user.first_name}} {{vm.user.last_name}}</span>
+        </div>
+        <div flex class="userDetails" layout="column">
+            <div flex class="userDetailsHead">Details:
+                <i class="userEdit fa fa-edit" ng-hide="uform.$visible" ng-click="uform.$show()"></i>
+                <i class="userEdit saveBtn fa fa-floppy-o" ng-show="uform.$visible"  ng-click="uform.$submit() "></i>
+                  <form hidden editable-form name="uform" onaftersave="vm.sync($data,vm.user.id)"></form>
+                </div>
+            <div flex class="userDetailsId" layout>
+                <div class="label" flex="15">Account ID:</div>
+                <div class="details" flex>
+                    <span e-name="id">{{vm.user.id}}</span>
+                </div>
+            </div>
+            <div flex class="userDetailsName" layout>
+                <div class="label" flex="15">First Name:</div>
+                <div class="details" flex>
+                    <span editable-text="vm.user.first_name" e-name="fname" e-form="uform" buttons="no">{{vm.user.first_name}}</span>
+                </div>
+            </div>
+            <div flex class="userDetailsName" layout>
+                <div class="label" flex="15">Last Name:</div>
+                <div class="details" flex>
+                    <span editable-text="vm.user.last_name" e-name="lname" e-form="uform" buttons="no">{{vm.user.last_name}}</span>
+                </div>
+            </div>
+            <div flex class="userDetailsEmail" layout>
+                <div class="label" flex="15">Email Address:</div>
+                <div class="details" flex>
+                    <span editable-text="vm.user.email" e-name="email" e-form="uform" buttons="no">{{vm.user.email}}</span>
+                </div>
+            </div>
 
+        </div>
+    </div>
 </div>

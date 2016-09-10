@@ -4,8 +4,9 @@
           <span>{{vm.header}} |</span>
         </div>
         <div class="menu" flex>
-            <a href="#" ng-repeat="menu in vm.menus" ng-click="vm.switchView(menu)">
-                <span ng-class="{'selected': vm.selected === menu}">{{menu}}</span>
+            <a ng-repeat="menu in vm.menus" ui-sref="{{menu.sref}}"  ui-sref-active="active"
+            ng-click="vm.switchView(menu.title)">
+                <span ng-class="">{{menu.title}}</span>
             </a>
         </div>
         <div class="user" flex>
@@ -16,7 +17,7 @@
 <div class="subHeader" flex>
     <div layout>
         <div class="subMenu" flex>
-          <a href="#" ng-repeat="submenu in vm.subMenus">
+          <a href="#" ng-repeat="submenu in vm.selected.subs">
             <span>{{submenu}}</span>
           </a>
         </div>

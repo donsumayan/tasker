@@ -9,7 +9,9 @@
         var vm = this;
 
         vm.user = userservice.getUser()
-        
+        vm.sync = function (data,id) {
+          // TODO: ADD SYNC LOGIC
+        };
 
     }
 
