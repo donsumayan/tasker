@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Model for a user.
  * 
@@ -33,6 +35,7 @@ public class User {
 	@Column(name = "email", nullable = false)
 	private String email;
 
+	@JsonIgnore
 	@Column(name = "password", nullable = false)
 	private String password;
 

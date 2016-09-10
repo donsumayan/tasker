@@ -12,7 +12,7 @@
 	<!-- Enable the method security to use the @PreAuthorize, @PreFilter, @PostAuthorize 
 		and @PostFilter annotations in methods and secure it. -->
 	<global-method-security pre-post-annotations="enabled" />
-	<http pattern="/auth/login" security="none" />
+	<http pattern="/login" security="none" />
 
 	<context:component-scan base-package="com.comp.todo.*" />
 

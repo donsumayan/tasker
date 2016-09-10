@@ -35,7 +35,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 			return new User(user.getEmail(), user.getPassword(), enabled, accountNonExpired, credentialsNonExpired,
 					accountNonLocked, getAuthorities(role));
 		} catch (Exception ex) {
-			throw new UsernameNotFoundException(username);
+			throw new UsernameNotFoundException(Constants.INVALID_CREDENTIALS);
 		}
 	}
 

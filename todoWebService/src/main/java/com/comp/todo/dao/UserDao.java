@@ -18,4 +18,5 @@ public interface UserDao extends BaseDao<User, Long> {
 	 * @return the user with the given email.
 	 */
 	public User findByEmail(String email);
+
 }

@@ -40,4 +40,9 @@ public final class Constants {
 	 */
 	public static final String AUTH_USER_NOT_FOUND = "User not found.";
 
+	/**
+	 * Message to be returned if wrong credentials are passed.
+	 */
+	public static final String INVALID_CREDENTIALS = "Wrong email or password.";
+
 }
