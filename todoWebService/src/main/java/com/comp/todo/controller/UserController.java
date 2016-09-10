@@ -7,10 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.comp.todo.constants.Views;
 import com.comp.todo.model.Todo;
 import com.comp.todo.model.User;
 import com.comp.todo.service.TodoService;
 import com.comp.todo.service.UserService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 
 /**
  * Handles HTTP requests for the different operations on users.
@@ -38,10 +42,11 @@ public class UserController {
 	 * Returns all the users from the database.
 	 * 
 	 * @return the list of all users in the database.
+	 * @throws JsonProcessingException
 	 */
 	@RequestMapping(value = "", method = RequestMethod.GET)
-	public Object getUsers() {
-		return userService.listAll();
+	public Object getUsers() throws JsonProcessingException {
+		return userService.getUsers();
 	}
 
 	/**
@@ -63,7 +68,7 @@ public class UserController {
 	 */
 	@RequestMapping(value = "", method = RequestMethod.POST)
 	public Object createUser(@RequestBody User user) {
-		return userService.add(user);
+		return userService.addUser(user);
 	}
 
 	/**
