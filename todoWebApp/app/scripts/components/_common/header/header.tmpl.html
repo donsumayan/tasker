@@ -4,22 +4,38 @@
           <span>{{vm.header}} |</span>
         </div>
         <div class="menu" flex>
-            <a ng-repeat="menu in vm.menus" ui-sref="{{menu.sref}}"  ui-sref-active="active"
-            ng-click="vm.switchView(menu.title)">
-                <span ng-class="">{{menu.title}}</span>
+            <a ui-sref="main-default.home">
+                <span ng-class="{'selected':vm.state==='home'}">My Todo's</span>
+            </a>
+            <a ui-sref="main-default.user">
+                <span ng-class="{'selected':vm.state==='user'}">My Account</span>
             </a>
         </div>
         <div class="user" flex>
-            {{vm.user.firstName}} {{vm.user.lastName}}
+            {{vm.user.first_name}} {{vm.user.last_name}}
+            <i class="fa fa-user" aria-label="hidden"></i>
         </div>
     </div>
 </div>
 <div class="subHeader" flex>
     <div layout>
         <div class="subMenu" flex>
-          <a href="#" ng-repeat="submenu in vm.selected.subs">
-            <span>{{submenu}}</span>
-          </a>
+          <div ng-show="vm.state==='home'">
+            <a href="" ng-click="vm.loadTodo('all')" ng-class="{'subSelected':vm.subSelected==='all'}">
+              <span>All</span>
+            </a>
+            <a href="" ng-click="vm.loadTodo('pending')" ng-class="{'subSelected':vm.subSelected==='pending'}">
+              <span>Pending</span>
+            </a>
+            <a href="" ng-click="vm.loadTodo('done')" ng-class="{'subSelected':vm.subSelected==='done'}">
+              <span>Done</span>
+            </a>
+          </div>
+          <div ng-show="vm.state==='user'">
+              <a ui-sref="main-default.user" class="subSelected">
+                <span>Profile</span>
+              </a>
+          </div>
         </div>
     </div>
 </div>

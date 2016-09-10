@@ -7,7 +7,8 @@
             'todo.components.services',
             'todo.components.directives',
             'todo.components.content',
-            'todo.components.user'
+            'todo.components.user',
+            'todo.components.login'
         ]);
 
 })();

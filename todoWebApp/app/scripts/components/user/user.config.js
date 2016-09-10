@@ -6,7 +6,7 @@
         .config(userConfig);
 
     function userConfig($stateProvider, $urlRouterProvider) {
-        // $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/');
 
         $stateProvider
             .state('main-default.user', {

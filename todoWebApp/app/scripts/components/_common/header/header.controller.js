@@ -5,39 +5,26 @@
         .module('todo.components.common.header')
         .controller('headerController', headerController);
 
-    function headerController($scope, $location, userservice) {
+    function headerController($scope,$rootScope, $state, globals) {
         var vm = this;
         vm.header = "Tasker";
-        vm.user = userservice.getUser();
-        vm.menus = [{
-            title: "My Todo's",
-            sref: "main-default.home",
-            subs: ["All", "Done", "Pending"]
-        }, {
-            title: "My Account",
-            sref: "main-default.user",
-            subs: ["All", "Done", "Pending"]
-        }];
-        vm.selected = vm.menus[0];
-        vm.subMenus = ["All", "Done", "Pending"];
+        vm.user = globals.getUser;
+        vm.selected = globals.getState;
+        vm.subSelected='all';
 
-        vm.switchView = function(view) {
-                $location.path(view)
-                switch (view) {
-                    case vm.menus[0].title:
-                        vm.selected = vm.menus[0];
-                        console.log("selected view :"+vm.selected);
-                        break;
-                    case vm.menus[1].title:
-                        vm.selected = vm.menus[1];
-                        console.log("selected view :"+vm.selected);
-                        break;
-                    default:
-                        console.log('default');
-                        break;
-                }
-            }
-            // vm.user = user;
+        vm.setState = function (state) {
+          vm.selected=state;
+          globals.setState(state);
+        };
+        vm.loadTodo = function (mode) {
+          vm.subSelected = mode;
+          $rootScope.$emit('updateTodoList',mode);
+        };
+
+        $rootScope.$on('updateHeader',function (evt,data) {
+            vm.state=data;
+        });
+
     }
 
 })();
