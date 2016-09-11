@@ -12,15 +12,15 @@
 	<!-- Enable the method security to use the @PreAuthorize, @PreFilter, @PostAuthorize 
 		and @PostFilter annotations in methods and secure it. -->
 	<global-method-security pre-post-annotations="enabled" />
-	<http pattern="/auth/login" security="none" />
+	<http pattern="/login" security="none" />
 
-	<context:component-scan base-package="com.comp.todo.*" />
+	<context:component-scan base-package="com.comp.tasker.*" />
 
 	<!-- Secure the application´s urls with the specific Role -->
 	<http auto-config="true" use-expressions="true" entry-point-ref="authEntryPoint">
+		<intercept-url pattern="/users" access="permitAll"
+			method="POST" />
 		<intercept-url pattern="/users" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/users/**" access="hasRole('ROLE_ADMIN')"
-			method="DELETE" />
 		<intercept-url pattern="/todos" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/**" access="isAuthenticated()" />
 		<form-login />
@@ -33,6 +33,6 @@
 	</authentication-manager>
 
 	<beans:bean id="customUserDetailsService"
-		class="com.comp.todo.security.UserDetailsServiceImpl" />
-	<beans:bean id="authEntryPoint" class="com.comp.todo.security.AuthEntryPoint" />
+		class="com.comp.tasker.security.UserDetailsServiceImpl" />
+	<beans:bean id="authEntryPoint" class="com.comp.tasker.security.AuthEntryPoint" />
 </beans:beans>
