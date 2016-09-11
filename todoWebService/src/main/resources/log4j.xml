@@ -16,7 +16,7 @@
 		<param name="maxFileSize" value="10MB" />
 		<rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
 			<param name="FileNamePattern"
-				value="./opt/payroll/logs/payroll_%d{yyyy-MM-dd}.log" />
+				value="./opt/tasker/logs/tasker_%d{yyyy-MM-dd}.log" />
 		</rollingPolicy>
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern"
@@ -25,7 +25,7 @@
 	</appender>
 
 	<!-- Application Loggers -->
-	<logger name="com.fsoft.payroll">
+	<logger name="com.comp.tasker">
 		<level value="debug" />
 	</logger>
 

@@ -7,7 +7,7 @@
 	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:component-scan base-package="com.comp.todo.*" />
+	<context:component-scan base-package="com.comp.tasker.*" />
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="propertyConfigurer"
@@ -35,7 +35,7 @@
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
-		<property name="packagesToScan" value="com.comp.todo" />
+		<property name="packagesToScan" value="com.comp.tasker" />
 	</bean>
 
 	<tx:annotation-driven transaction-manager="transactionManager" />

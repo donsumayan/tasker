@@ -14,7 +14,7 @@
 	<global-method-security pre-post-annotations="enabled" />
 	<http pattern="/login" security="none" />
 
-	<context:component-scan base-package="com.comp.todo.*" />
+	<context:component-scan base-package="com.comp.tasker.*" />
 
 	<!-- Secure the application´s urls with the specific Role -->
 	<http auto-config="true" use-expressions="true" entry-point-ref="authEntryPoint">
@@ -33,6 +33,6 @@
 	</authentication-manager>
 
 	<beans:bean id="customUserDetailsService"
-		class="com.comp.todo.security.UserDetailsServiceImpl" />
-	<beans:bean id="authEntryPoint" class="com.comp.todo.security.AuthEntryPoint" />
+		class="com.comp.tasker.security.UserDetailsServiceImpl" />
+	<beans:bean id="authEntryPoint" class="com.comp.tasker.security.AuthEntryPoint" />
 </beans:beans>
