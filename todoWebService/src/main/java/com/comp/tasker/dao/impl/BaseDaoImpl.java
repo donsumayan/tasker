@@ -89,7 +89,7 @@ public abstract class BaseDaoImpl<E, K extends Serializable> implements BaseDao<
 	 */
 	@Override
 	public long saveOrUpdate(E entity) {
-		sessionFactory.getCurrentSession().saveOrUpdate(entity);
+		sessionFactory.getCurrentSession().merge(entity);
 		return 1;
 	}
 

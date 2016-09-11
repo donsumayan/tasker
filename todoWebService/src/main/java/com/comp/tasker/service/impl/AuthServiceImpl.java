@@ -44,7 +44,7 @@ public class AuthServiceImpl implements AuthService {
 				return "";
 			}
 		} else {
-			return null;
+			return "";
 		}
 	}
 

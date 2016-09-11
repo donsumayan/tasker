@@ -3,6 +3,8 @@ package com.comp.tasker.controller;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -67,7 +69,12 @@ public class UserController {
 	 */
 	@RequestMapping(value = "", method = RequestMethod.POST)
 	public Object createUser(@RequestBody User user) {
-		return userService.addUser(user);
+		Long result = userService.addUser(user);
+		if (result == 1) {
+			return result;
+		} else {
+			return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
+		}
 	}
 
 	/**
@@ -79,7 +86,7 @@ public class UserController {
 	 */
 	@RequestMapping(value = "/{userId}", method = RequestMethod.PUT)
 	public Object updateUser(@RequestBody User user) {
-		return userService.update(user);
+		return userService.updateUser(user);
 	}
 
 	/**

@@ -50,12 +50,16 @@ public class UserServiceImpl extends BaseServiceImpl<User, Long> implements User
 
 	@Override
 	public Long addUser(User user) {
-		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		String encodedPassword = encoder.encode(user.getPassword());
-		user.setPassword(encodedPassword);
-		userDao.save(user);
+		if (userDao.findByEmail(user.getEmail().trim()) != null) {
+			return new Long(0);
+		} else {
+			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+			String encodedPassword = encoder.encode(user.getPassword());
+			user.setPassword(encodedPassword);
+			userDao.save(user);
 
-		return new Long(1);
+			return new Long(1);
+		}
 	}
 
 	@Override
@@ -68,6 +72,20 @@ public class UserServiceImpl extends BaseServiceImpl<User, Long> implements User
 		} catch (JsonProcessingException e) {
 			return "";
 		}
+	}
+
+	@Override
+	public Long updateUser(User user) {
+		if (user.getPassword() == null || user.getPassword().isEmpty()) {
+			User originalUser = userDao.get(user.getId());
+			user.setPassword(originalUser.getPassword());
+		} else {
+			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+			String encodedPassword = encoder.encode(user.getPassword());
+			user.setPassword(encodedPassword);
+		}
+
+		return userDao.saveOrUpdate(user);
 	}
 
 }

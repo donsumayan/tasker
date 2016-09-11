@@ -35,4 +35,13 @@ public interface UserService extends BaseService<User, Long> {
 	 * @return 1 if the operation is successful.
 	 */
 	public Long addUser(User user);
+
+	/**
+	 * Updates a user in the database.
+	 * 
+	 * @param user
+	 *            the user to be updated.
+	 * @return 1 if the operation is successful.
+	 */
+	public Long updateUser(User user);
 }
