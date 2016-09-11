@@ -1,27 +1,30 @@
 <div flex="80" class="board">
     <div layout="column">
+        <div class="syncing">
+          <span ng-hide="vm.runningTasks===0">syncing</span>
+        </div>
         <div class="todo" flex ng-repeat="todo in vm.todos">
             <div layout="row">
-                <div flex ng-show="todo.note==='Add Note'" class="addTask">
-                    <span ng-click="vm.editNewNote(eform,$index)">
+                <div flex ng-show="todo.note==='Add Note'" class="addTask" ng-click="vm.editNewNote(eform,$index)">
+                    <span >
                       <i class="fa fa-plus" aria-hidden="true"></i>
                       ADD NEW NOTE
                     </span>
                 </div>
                 <div class="status" flex="10" ng-show="todo.note!=='Add Note'">
 
-                    <i class="fa fa-check-square-o" ng-click="todo.isDone=false" ng-show="todo.isDone" aria-hidden="true"></i>
-                    <i class="fa fa-square-o" ng-click="todo.isDone=true" ng-show="!todo.isDone" aria-hidden="true"></i>
+                    <i class="fa fa-check-square-o" ng-click="vm.isDone(todo,$index)" ng-show="todo.isDone" aria-hidden="true"></i>
+                    <i class="fa fa-square-o" ng-click="vm.isDone(todo,$index)" ng-show="!todo.isDone" aria-hidden="true"></i>
 
                 </div>
                 <div flex ng-show="todo.note!=='Add Note'" class="note">
-                    <span editable-text="todo.note" e-form="eform" onbeforesave="vm.addNote()" buttons="no">
+                    <span editable-text="todo.note" e-name="note" e-form="eform" onbeforesave="vm.addNote()" buttons="no">
                       {{todo.note||"edit note"}}
                     </span>
                 </div>
                 <div flex="10" ng-show="todo.note!=='Add Note'">
 
-                      <form editable-form name="eform" onbeforesave="v" layout layout-align="space-around center">
+                      <form editable-form name="eform" onaftersave="vm.sync(todo,$index)" layout layout-align="space-around center">
                         <button type="submit" ng-show="eform.$visible" ng-disabled="eform.$waiting" class="saveBtn">
                           <i class="fa fa-floppy-o" aria-hidden="true"></i>
                         </button>
@@ -29,7 +32,7 @@
                           <i class="fa fa-times-circle" aria-hidden="true"></i>
                         </button>
                         <i class="fa fa-edit" ng-hide="eform.$visible" ng-click="eform.$show()"  aria-hidden="true"></i>
-                        <i class="fa fa-times-circle" ng-hide="eform.$visible" ng-click="vm.removeNote($index)"  aria-hidden="true"></i>
+                        <i class="fa fa-times-circle" ng-hide="eform.$visible" ng-click="vm.removeNote(todo.id,$index)"  aria-hidden="true"></i>
 
                       </form>
 

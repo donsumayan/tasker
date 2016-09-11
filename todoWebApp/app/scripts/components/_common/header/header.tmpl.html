@@ -1,7 +1,7 @@
 <div class="mainHeader" flex>
     <div layout layout-align="center end">
         <div class="logo" flex="10">
-          <span>{{vm.header}} |</span>
+            <span>{{vm.header}} |</span>
         </div>
         <div class="menu" flex>
             <a ui-sref="main-default.home">
@@ -11,31 +11,35 @@
                 <span ng-class="{'selected':vm.state==='user'}">My Account</span>
             </a>
         </div>
-        <div class="user" flex>
-            {{vm.user.first_name}} {{vm.user.last_name}}
-            <i class="fa fa-user" aria-label="hidden"></i>
+        <div class="user" flex="20">
+            {{vm.user.firstName}} {{vm.user.lastName}}
+            <i class="fa fa-sign-out" aria-label="hidden" ng-click="vm.logout()" ng-show="vm.user"></i>
         </div>
     </div>
 </div>
 <div class="subHeader" flex>
     <div layout>
         <div class="subMenu" flex>
-          <div ng-show="vm.state==='home'">
-            <a href="" ng-click="vm.loadTodo('all')" ng-class="{'subSelected':vm.subSelected==='all'}">
-              <span>All</span>
-            </a>
-            <a href="" ng-click="vm.loadTodo('pending')" ng-class="{'subSelected':vm.subSelected==='pending'}">
-              <span>Pending</span>
-            </a>
-            <a href="" ng-click="vm.loadTodo('done')" ng-class="{'subSelected':vm.subSelected==='done'}">
-              <span>Done</span>
-            </a>
-          </div>
-          <div ng-show="vm.state==='user'">
-              <a ui-sref="main-default.user" class="subSelected">
-                <span>Profile</span>
-              </a>
-          </div>
+            <div ng-show="vm.state==='home'">
+                <a href="" ng-click="vm.loadTodo('all')" ng-class="{'subSelected':vm.subSelected==='all'}">
+                    <span>All</span>
+                </a>
+                <a href="" ng-click="vm.loadTodo('pending')" ng-class="{'subSelected':vm.subSelected==='pending'}">
+                    <span>Pending</span>
+                </a>
+                <a href="" ng-click="vm.loadTodo('done')" ng-class="{'subSelected':vm.subSelected==='done'}">
+                    <span>Done</span>
+                </a>
+            </div>
+            <div ng-show="vm.state==='user'">
+                <a ui-sref="main-default.user" class="subSelected">
+                    <span>Profile</span>
+                </a>
+            </div>
+
         </div>
+    </div>
+    <div class="syncing">
+
     </div>
 </div>

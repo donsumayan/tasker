@@ -16,6 +16,11 @@ a:hover {
     color: inherit;
 }
 
+.register {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .header {
     box-shadow: 0 0 10px $cp2;
 
@@ -87,19 +92,19 @@ a:hover {
     .user {
         margin-right: 20px;
 
-        span {
-            padding: 0 10px;
-            cursor: pointer;
-            user-select: none;
-        }
-
         i {
             font-size: 1.1em;
             padding: 0 2px;
+            cursor: pointer;
         }
 
-        span:hover {
+        i:hover {
             text-shadow: 0 0 10px $cp1;
+            outline: none;
+        }
+
+        i:focus {
+            outline: none;
         }
     }
 }
@@ -126,6 +131,12 @@ a:hover {
         md-grid-list.ng-enter {
             transition: opacity 0.2s;
             opacity: 0;
+        }
+
+        .syncing {
+            text-align: right;
+            font-style: italic;
+            height: 20px;
         }
 
         .todo {
@@ -241,33 +252,54 @@ a:hover {
         height: 94vh;
 
         .loginBox {
-            padding: 10px 0px;
+            padding: 10px 0;
             border: 1px solid $cp2;
             border-radius: 5px;
             background: $cp2;
 
             .inputBox {
-              padding:10px;
-              color:white;
-              .submitBtn{
-                  width:300px
-              }
-              .submitBtn:hover{
-                text-shadow: 0px 0px 10px $cp2;
-              }
-              .submitBtn:active{
-                background: rgba(81, 122, 139, 0.3);
-              }
-              input {
-                  background: white;
-                  font-size: 1.5em;
-                  padding:10px;
-                  text-align: center;
-                  width:400px;
-              }
-              input:focus{
-                  outline: none;
-              }
+                padding: 10px;
+                color: white;
+
+                .submitBtn {
+                    width: 300px;
+                    padding: 5px;
+                    color: white;
+                    font-size: 1.3em;
+                }
+
+                .submitBtn:hover {
+                    box-shadow: 0 0 10px $cp1;
+                }
+
+                .submitBtn:focus {
+                    outline: none;
+                }
+
+                .submitBtn:active {
+                    box-shadow: 0 0 20px $cp1;
+                }
+
+                input {
+                    background: white;
+                    font-size: 1.5em;
+                    padding: 10px;
+                    text-align: center;
+                    width: 400px;
+                }
+
+                input:focus {
+                    outline: none;
+                    box-shadow: 0 0 10px $cp1;
+                }
+            }
+            .inputBox.ng-enter {
+                transition: opacity 0.2s;
+                opacity: 0;
+            }
+
+            .inputBox.ng-enter.ng-enter-active {
+                opacity: 1;
             }
         }
     }
@@ -285,7 +317,7 @@ a:hover {
 }
 
 .content.ng-enter {
-    transition: opacity 1s, transform 1s;
+    transition: opacity 0.5s, transform 0.5s;
     opacity: 0;
     transform: translateX(50px);
 }

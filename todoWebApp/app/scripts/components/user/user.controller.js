@@ -5,14 +5,23 @@
         .module('todo.components.user')
         .controller('userController', userController);
 
-    function userController($scope,$rootScope,userservice) {
+    function userController($scope, $rootScope, $cookies, userservice) {
+        $rootScope.$emit('updateHeader', 'user');
         var vm = this;
+        var user = $cookies.getObject('user');
+        vm.user = user;
 
-        $rootScope.$emit('updateHeader','user');
+        vm.sync = function(data) {
+            data.id = user.id;
 
-        vm.user = userservice.getUser();
-        vm.sync = function (data,id) {
-          // TODO: ADD SYNC LOGIC
+            userservice.updateUser(data).then(
+                function(data) {
+                    vm.user = data;
+                    $cookies.putObject('user', data);
+                    $rootScope.$emit('updateUser', data);
+                }
+            );
+            console.log(data);
         };
 
 

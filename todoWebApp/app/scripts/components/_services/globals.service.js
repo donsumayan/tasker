@@ -11,30 +11,27 @@
         var todoMode;
         var user;
         return {
-            getUser: this.user,
+            getUser: getUser,
             setUser: setUser,
-            getTodoMode: this.todoMode,
+            getTodoMode: todoMode,
             setTodoMode: setTodoMode,
-            getState: !this.state? 'home':this.state,
+            getState: !state? 'home':state,
             setState: setState
         };
 
         function setState(newState) {
-          this.state=newState;
-        };
+          tate=newState;
+        }
         function setTodoMode(newMode) {
-          this.todoMode=newMode;
-        };
-
-        function setUser() {
-            this.user = {
-                "id":1,
-                "first_name": "don",
-                "last_name": "sumayan",
-                "email": "don.sumayan@gmail.com",
-                "role_id": "1"
-            };
-
+          todoMode=newMode;
+        }
+        function getUser() {
+          return user;
+        }
+        function setUser(newUser) {
+          console.log(newUser);
+          user=newUser;
+          console.log(user);
         }
     }
 

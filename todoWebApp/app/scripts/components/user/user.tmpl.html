@@ -1,13 +1,13 @@
 <div flex="80" class="userView">
     <div layout="column" layout-padding="10" layout-margin="5">
         <div flex class="userHeader">
-            <span>{{vm.user.first_name}} {{vm.user.last_name}}</span>
+            <span>{{vm.user.firstName}} {{vm.user.lastName}}</span>
         </div>
         <div flex class="userDetails" layout="column">
             <div flex class="userDetailsHead">Details:
                 <i class="userEdit fa fa-edit" ng-hide="uform.$visible" ng-click="uform.$show()"></i>
                 <i class="userEdit saveBtn fa fa-floppy-o" ng-show="uform.$visible"  ng-click="uform.$submit() "></i>
-                  <form hidden editable-form name="uform" onaftersave="vm.sync($data,vm.user.id)"></form>
+                  <form hidden editable-form name="uform" onaftersave="vm.sync($data)"></form>
                 </div>
             <div flex class="userDetailsId" layout>
                 <div class="label" flex="15">Account ID:</div>
@@ -18,13 +18,13 @@
             <div flex class="userDetailsName" layout>
                 <div class="label" flex="15">First Name:</div>
                 <div class="details" flex>
-                    <span editable-text="vm.user.first_name" e-name="fname" e-form="uform" buttons="no">{{vm.user.first_name}}</span>
+                    <span editable-text="vm.user.firstName" e-name="firstName" e-form="uform" buttons="no">{{vm.user.firstName}}</span>
                 </div>
             </div>
             <div flex class="userDetailsName" layout>
                 <div class="label" flex="15">Last Name:</div>
                 <div class="details" flex>
-                    <span editable-text="vm.user.last_name" e-name="lname" e-form="uform" buttons="no">{{vm.user.last_name}}</span>
+                    <span editable-text="vm.user.lastName" e-name="lastName" e-form="uform" buttons="no">{{vm.user.lastName}}</span>
                 </div>
             </div>
             <div flex class="userDetailsEmail" layout>

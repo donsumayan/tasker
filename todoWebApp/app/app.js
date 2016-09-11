@@ -2,9 +2,9 @@
 (function() {
     'use strict';
     angular.module('todo', ['ui.router',
+        'ngCookies',
         'ngMaterial',
         'ngAnimate',
-        'ui.bootstrap',
         'xeditable',
         'todo.components'
     ]);
