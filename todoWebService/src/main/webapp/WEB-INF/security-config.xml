@@ -18,9 +18,9 @@
 
 	<!-- Secure the application´s urls with the specific Role -->
 	<http auto-config="true" use-expressions="true" entry-point-ref="authEntryPoint">
+		<intercept-url pattern="/users" access="permitAll"
+			method="POST" />
 		<intercept-url pattern="/users" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/users/**" access="hasRole('ROLE_ADMIN')"
-			method="DELETE" />
 		<intercept-url pattern="/todos" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/**" access="isAuthenticated()" />
 		<form-login />
