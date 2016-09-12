@@ -10,6 +10,7 @@
         var vm = this;
 
         vm.registrationMode = false;
+        vm.regSuccesful=false;
 
         vm.login = function() {
 
@@ -45,6 +46,7 @@
         };
         vm.register = function() {
             vm.processing = true;
+            vm.regSuccesful=false;
             vm.message = "creating user account";
             var u = {};
             u.firstName = vm.firstName;
@@ -60,6 +62,8 @@
                 userservice.createUser(u).then(
                     function(data) {
                         vm.processing = false;
+                        vm.regSuccesful=true;
+                        vm.registrationMode = false;
                     }
                 ).catch(
                   function () {

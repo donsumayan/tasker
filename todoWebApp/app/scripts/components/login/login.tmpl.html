@@ -1,18 +1,24 @@
 <div flex class="login" layout layout-align="center center">
-
     <div class="loginBox" flex="40" layout="column" ng-show="!vm.processing" layout-align="center center">
         <div class="title">
             Tasker |
         </div>
-        <div class="inputBox">
+        <div class="inputBox topInputBox">
             <span ng-show="!vm.registrationMode">
-            Login to view you tasks or
-            <span class="register" ng-click="vm.registrationMode=true">click to register.</span>
+                Login to view you tasks or
+                <span class="register" ng-click="vm.registrationMode=true">
+                    click to register.
+                </span>
             </span>
             <span ng-show="vm.registrationMode">
-            Already a member?
-            <span class="register" ng-click="vm.registrationMode=false">Login</span> now
+                Already a member?
+                <span class="register" ng-click="vm.registrationMode=false">
+                    Login
+                </span> now
             </span>
+            <div class="regSuccesful" ng-show="vm.regSuccesful">
+                Registration succesfull. You can now login
+            </div>
         </div>
         <form ng-submit="vm.login()">
             <div class="inputBox" ng-show="vm.registrationMode">
@@ -31,7 +37,6 @@
                 <input type="password" placeholder="verify password" ng-model="vm.vpassword" required>
             </div>
         </form>
-
         <div class="inputBox" ng-show="vm.registrationMode">
             <button class="submitBtn" ng-click="vm.register()">register</button>
         </div>
@@ -50,5 +55,4 @@
             {{vm.message}}
         </div>
     </div>
-
 </div>

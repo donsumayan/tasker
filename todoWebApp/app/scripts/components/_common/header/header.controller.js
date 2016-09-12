@@ -29,9 +29,14 @@
             $state.go('main-default.login');
         };
 
+        vm.admin = function () {
+          $state.go('main-default.admin');
+        }
+
         $rootScope.$on('updateHeader', function(evt, data) {
             vm.state = data;
         });
+
         $rootScope.$on('updateUser', function(evt, data) {
             vm.user = data;
         });

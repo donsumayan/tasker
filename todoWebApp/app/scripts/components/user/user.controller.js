@@ -5,7 +5,7 @@
         .module('todo.components.user')
         .controller('userController', userController);
 
-    function userController($scope, $rootScope, $cookies, userservice) {
+    function userController($scope, $rootScope,$state,$cookies, userservice) {
         $rootScope.$emit('updateHeader', 'user');
         var vm = this;
         var user = $cookies.getObject('user');
@@ -22,6 +22,16 @@
                 }
             );
             console.log(data);
+        };
+        vm.deleteAccount = function() {
+            userservice.deleteUser(user.id).then(
+                function() {
+                    if (data.status===200) {
+                        $cookies.removeObject('user');
+                        $state.go('main-default.login');
+                    }                   
+                }   
+            );
         };
 
 

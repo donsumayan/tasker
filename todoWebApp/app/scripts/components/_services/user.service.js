@@ -18,8 +18,9 @@
             createUser: createUser,
             getUser: getUser,
             getUsers: getUsers,
-            delUser: deleteUser,
-            updateUser: updateUser
+            deleteUser: deleteUser,
+            updateUser: updateUser,
+            toggleAdministrator:toggleAdministrator
         };
 
         function login(user) {
@@ -60,8 +61,7 @@
         }
 
         function getUser(id) {
-
-            $http.defaults.headers.common.Authorization = 'Basic dmluY2VudEBnbWFpbC5jb206MTIzNDU=';
+            $http.defaults.headers.common.Authorization = $cookies.get('Auth');
             return $http.get(url + 'users/' + id)
                 .then(onComplete)
                 .catch(onFail);
@@ -78,9 +78,8 @@
         }
 
         function getUsers() {
-
-            $http.defaults.headers.common.Authorization = 'Basic dmluY2VudEBnbWFpbC5jb206MTIzNDU=';
-            return $http.get(url + 'users/' + id)
+            $http.defaults.headers.common.Authorization = $cookies.get('Auth');
+            return $http.get(url + 'users')
                 .then(onComplete)
                 .catch(onFail);
 
@@ -90,7 +89,6 @@
 
             function onFail(error) {
                 console.log(error);
-                return tempUser;
             }
 
         }
@@ -115,20 +113,35 @@
             }
         }
 
-        function deleteUser(id) {
+        function toggleAdministrator(user) {
+            user.password = "";
             $http.defaults.headers.common.Authorization = $cookies.get('Auth');
-            return $http.delete(url + 'user/' + id)
+            return $http.put(url + 'users/' + user.id, user)
                 .then(onComplete)
                 .catch(onFail);
 
             function onComplete(response) {
-                return response.data;
+                return user;
             }
 
             function onFail(error) {
                 console.log(error);
             }
         }
-    }
+
+        function deleteUser(id) {
+            $http.defaults.headers.common.Authorization = $cookies.get('Auth');
+            return $http.delete(url + 'users/' + id)
+                .then(onComplete)
+                .catch(onFail);
+
+            function onComplete(response) {
+                return response;
+            }
+
+            function onFail(response) {
+                return response;
+            }
+        }    }
 
 })();

@@ -1,0 +1,48 @@
+<div flex="80" class="adminView">
+    <div layout="column" layout-padding="5">
+        <div class="adminTools" flex layout>
+            <div class="searchBar" flex>
+                Total of users: {{vm.users.length}} | Total of Todos: {{ vm.todoCount }}
+            </div>
+        </div>
+        <div class="adminTables" flex layout="column">
+            
+            <table class="userTable" layout="column" ng-show="vm.users.length>0">
+                <tr flex layout class="thead">
+                    <th flex="15" class="" layout layout-align="space-around center"><span>id</span></th>
+                    <th flex="" class="name" layout layout-align="start center"><span>name</span></th>
+                    <th flex="20" class="" layout layout-align="center center"><span>todos</span></th>
+                    <th flex="30" class="" layout layout-align="center center"><span>role</span></th>
+                    <th flex="10" class="" layout layout-align="space-around center"><span>remove</span></th>
+                </tr>
+                <tr ng-repeat="user in vm.users" flex layout>
+                    <td flex="15" class="id" layout layout-align="space-around center"><span>{{ user.id}}</span></td>
+                    <td flex="" class="name">{{ user.firstName || 'empty' }} {{ user.lastName || 'empty' }}</td>
+                    <td flex="20" class="todos">{{vm.userTodos}} </td>
+                    <td flex="30" class="role" layout layout-align="center center">
+                        <button class="roleBtn" disabled>
+                            <i class="fa fa-circle" aria-hidden="true"></i>
+                            <span>User</span>
+                        </button>
+                        <button class="roleBtn" ng-click="vm.setAdmin($index)">
+                            <i ng-class="user.role.id===1 ? 'fa fa-circle':'fa fa-circle-thin'" aria-hidden="true"></i>
+                            <span>Admin</span>
+                        </button>
+                    </td>
+                    <td flex="10"  class="tools" layout layout-align="space-around center">
+                        <button class="rmvBtn" ng-click="vm.removeUser(user.id,$index)">
+                            <i ng-hide="user.removing" class="fa fa-times-circle" aria-hidden="true"></i>
+                            <span ng-show="user.removing">removing</span>
+                        </button>
+                    </td>
+                </tr>                
+            </table>
+
+            <div class="loading" ng-show="vm.users.length===0" layout layout-align="space-around center">
+                <div class="cssload-container">
+                    <div class="cssload-speeding-wheel"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

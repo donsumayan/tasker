@@ -8,11 +8,13 @@
                 <span ng-class="{'selected':vm.state==='home'}">My Todo's</span>
             </a>
             <a ui-sref="main-default.user">
-                <span ng-class="{'selected':vm.state==='user'}">My Account</span>
+                <span ng-class="{'selected': vm.state==='user'||vm.state==='admin'}">My Account</span>
             </a>
         </div>
         <div class="user" flex="20">
             {{vm.user.firstName}} {{vm.user.lastName}}
+
+            <i class="fa fa-cog" aria-label="hidden" ng-click="vm.admin()" ng-show="vm.user.role.id===1"></i>
             <i class="fa fa-sign-out" aria-label="hidden" ng-click="vm.logout()" ng-show="vm.user"></i>
         </div>
     </div>
@@ -31,9 +33,12 @@
                     <span>Done</span>
                 </a>
             </div>
-            <div ng-show="vm.state==='user'">
-                <a ui-sref="main-default.user" class="subSelected">
+            <div ng-show="vm.state==='user'||vm.state==='admin'">
+                <a ui-sref="main-default.user" ng-class="{'subSelected': vm.state==='user'}">
                     <span>Profile</span>
+                </a>
+                <a ui-sref="main-default.admin" ng-show="vm.user.role.id===1" ng-class="{'subSelected': vm.state==='admin'}">
+                    <span>Admin</span>
                 </a>
             </div>
 

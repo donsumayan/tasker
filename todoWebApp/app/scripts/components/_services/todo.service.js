@@ -18,12 +18,28 @@
             getTodo: getTodo,
             addTodo: addTodo,
             updateTodo: updateTodo,
-            removeTodo: removeTodo
+            removeTodo: removeTodo,
+            getAllTodos:getAllTodos
         };
         // read all
         function getTodos(userId) {
             $http.defaults.headers.common.Authorization = $cookies.get('Auth');
             return $http.get(url + 'users/' + userId + '/todos')
+                .then(onComplete)
+                .catch(onFail);
+
+            function onComplete(response) {
+                return response.data;
+            }
+
+            function onFail(data) {
+                console.log(data.status);
+            }
+        }
+        // read all
+        function getAllTodos() {
+            $http.defaults.headers.common.Authorization = $cookies.get('Auth');
+            return $http.get(url + '/todos')
                 .then(onComplete)
                 .catch(onFail);
 
