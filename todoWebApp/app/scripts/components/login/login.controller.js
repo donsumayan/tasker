@@ -8,33 +8,44 @@
     function loginController($http, $rootScope, $cookies, $state, userservice, globals) {
         $rootScope.$emit('updateHeader', 'user');
         var vm = this;
-        vm.email = "vincent@gmail.com";
-        vm.password = "12345";
 
         vm.registrationMode = false;
 
         vm.login = function() {
+
             var u = {};
+
+            vm.message = "logging in";
             if (vm.email) {
                 u.email = vm.email;
                 if (vm.password) {
                     u.password = vm.password;
+                    vm.processing = true;
                     userservice.login(u).then(
                         function(data) {
                             $cookies.putObject('user', data);
                             var auth = "Basic " + btoa(u.email + ":" + u.password);
                             $cookies.put('Auth', auth);
                             $state.go('main-default.home');
+                            vm.processing = false;
                         }
+                    ).catch(
+                      function () {
+                        vm.errors = 'email/password is incorrect';
+                      }
                     );
                 } else {
-                    console.log('password field missing');
+                    vm.processing = false;
+                    vm.errors = 'password is missing';
                 }
             } else {
-                console.log('username field missing');
+                vm.processing = false;
+                vm.errors = 'email is invalid';
             }
         };
         vm.register = function() {
+            vm.processing = true;
+            vm.message = "creating user account";
             var u = {};
             u.firstName = vm.firstName;
             u.lastName = vm.lastName;
@@ -46,16 +57,25 @@
             u.role.id = 2;
             u.role.name = "User";
             if (u.firstName && u.lastName && u.email && u.password && u.role.id && u.role.name) {
-              userservice.createUser(u).then(
-                  function(data) {
-                      console.log('succesfully registered');
+                userservice.createUser(u).then(
+                    function(data) {
+                        vm.processing = false;
+                    }
+                ).catch(
+                  function () {
+                    vm.errors = 'please try again';
                   }
-              );
-            }
-            else {
-              console.log('something is missing');
+                )
+
+            } else {
+              vm.errors = 'please complete the form';
             }
 
+        };
+
+        vm.hideLoader = function(message) {
+            vm.message = message;
+            vm.processing = false;
         };
 
 

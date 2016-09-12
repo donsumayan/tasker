@@ -7,6 +7,8 @@ $cp5: rgba(255, 230, 131, 1);
 
 body {
     font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 a,
@@ -251,11 +253,32 @@ a:hover {
     .login {
         height: 94vh;
 
+        .title {
+            // background: $cp2;
+            font-size: 2.4em;
+            font-weight: bold;
+            clear: both;
+            display: block;
+            padding: 20px;
+        }
+
+        .messages {
+            font-size: 0.8em;
+            padding: 15px 0;
+            color: $cp1;
+        }
+
         .loginBox {
             padding: 10px 0;
             border: 1px solid $cp2;
             border-radius: 5px;
             background: $cp2;
+            min-height: 300px;
+            min-width: 420px;
+
+            .loadMessage {
+                padding: 20px;
+            }
 
             .inputBox {
                 padding: 10px;
@@ -293,6 +316,7 @@ a:hover {
                     box-shadow: 0 0 10px $cp1;
                 }
             }
+
             .inputBox.ng-enter {
                 transition: opacity 0.2s;
                 opacity: 0;
