@@ -1,0 +1,1212 @@
+2016-09-10 23:55:15.160::INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2016-09-10 23:55:15.305::INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Sep 10 23:55:15 CST 2016]; root of context hierarchy
+2016-09-10 23:55:15.395::INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/security-config.xml]
+2016-09-10 23:55:15.748::INFO  org.springframework.security.core.SpringSecurityCoreVersion - You are running with Spring Security Core 3.2.3.RELEASE
+2016-09-10 23:55:15.748::INFO  org.springframework.security.config.SecurityNamespaceHandler - Spring Security 'config' module version is 3.2.3.RELEASE
+2016-09-10 23:55:15.783::INFO  org.springframework.security.config.method.GlobalMethodSecurityBeanDefinitionParser - Expressions were enabled for method security but no SecurityExpressionHandler was configured. All hasPermision() expressions will evaluate to false.
+2016-09-10 23:55:16.297::INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser - Creating access control expression attribute 'hasRole('ROLE_ADMIN')' for /users
+2016-09-10 23:55:16.297::INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser - Creating access control expression attribute 'hasRole('ROLE_ADMIN')' for /users/**
+2016-09-10 23:55:16.297::INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser - Creating access control expression attribute 'hasRole('ROLE_ADMIN')' for /todos
+2016-09-10 23:55:16.297::INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser - Creating access control expression attribute 'isAuthenticated()' for /**
+2016-09-10 23:55:19.047::INFO  org.springframework.security.config.http.AuthenticationConfigBuilder - No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page.
+2016-09-10 23:55:19.054::INFO  org.springframework.security.config.http.HttpSecurityBeanDefinitionParser - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 700, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1100, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1300, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1500, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2300]
+2016-09-10 23:55:19.068::INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'authEntryPoint' with a different definition: replacing [Generic bean: class [com.comp.todo.security.AuthEntryPoint]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\todo_app\todoWebService\target\classes\com\comp\todo\security\AuthEntryPoint.class]] with [Generic bean: class [com.comp.todo.security.AuthEntryPoint]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/security-config.xml]]
+2016-09-10 23:55:19.069::INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2016-09-10 23:55:19.464::INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from ServletContext resource [/WEB-INF/jdbc.properties]
+2016-09-10 23:55:19.471::INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-09-10 23:55:19.508::DEBUG org.springframework.ui.context.support.UiApplicationContextUtils - Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@3b78c683]
+2016-09-10 23:55:19.671::DEBUG org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper - Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-09-10 23:55:19.722::DEBUG org.springframework.security.access.intercept.aopalliance.MethodSecurityInterceptor - Validated configuration attributes
+2016-09-10 23:55:19.740::INFO  org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/login'], []
+2016-09-10 23:55:20.217::DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2016-09-10 23:55:20.251::DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2016-09-10 23:55:20.255::DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2016-09-10 23:55:20.261::DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2016-09-10 23:55:20.478::INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.1.0.Final}
+2016-09-10 23:55:20.483::INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2016-09-10 23:55:20.486::INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2016-09-10 23:55:20.594::DEBUG org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+2016-09-10 23:55:20.594::DEBUG org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+2016-09-10 23:55:20.601::DEBUG org.hibernate.boot.cfgxml.internal.JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+2016-09-10 23:55:20.976::DEBUG org.hibernate.cfg.Configuration - Building session factory using internal StandardServiceRegistryBuilder
+2016-09-10 23:55:21.007::DEBUG org.hibernate.service.spi.ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2016-09-10 23:55:21.008::DEBUG org.hibernate.cfg.Configuration - Building session factory using provided StandardServiceRegistry
+2016-09-10 23:55:21.047::DEBUG org.hibernate.cache.internal.RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2016-09-10 23:55:21.070::INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-10 23:55:21.108::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@5463f035
+2016-09-10 23:55:21.108::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@5463f035
+2016-09-10 23:55:21.109::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@5463f035
+2016-09-10 23:55:21.110::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@5b742bc8
+2016-09-10 23:55:21.111::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@3db6dd52
+2016-09-10 23:55:21.111::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@207dd1b7
+2016-09-10 23:55:21.113::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@b506ed0
+2016-09-10 23:55:21.113::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@b506ed0
+2016-09-10 23:55:21.113::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@b506ed0
+2016-09-10 23:55:21.115::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@5aea8994
+2016-09-10 23:55:21.115::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@5aea8994
+2016-09-10 23:55:21.115::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@5aea8994
+2016-09-10 23:55:21.117::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@409732fb
+2016-09-10 23:55:21.117::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@409732fb
+2016-09-10 23:55:21.117::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@409732fb
+2016-09-10 23:55:21.120::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@63917fe1
+2016-09-10 23:55:21.120::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@63917fe1
+2016-09-10 23:55:21.120::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@63917fe1
+2016-09-10 23:55:21.122::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@2b7facc7
+2016-09-10 23:55:21.122::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@2b7facc7
+2016-09-10 23:55:21.122::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@2b7facc7
+2016-09-10 23:55:21.124::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@5345dfe8
+2016-09-10 23:55:21.125::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@5345dfe8
+2016-09-10 23:55:21.126::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@5345dfe8
+2016-09-10 23:55:21.128::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@401e02b4
+2016-09-10 23:55:21.128::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@401e02b4
+2016-09-10 23:55:21.128::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@401e02b4
+2016-09-10 23:55:21.131::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@1abcd059
+2016-09-10 23:55:21.131::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@1abcd059
+2016-09-10 23:55:21.132::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@53feeac9
+2016-09-10 23:55:21.132::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@53feeac9
+2016-09-10 23:55:21.134::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@167a21b
+2016-09-10 23:55:21.134::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@167a21b
+2016-09-10 23:55:21.135::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@17fbfb02
+2016-09-10 23:55:21.137::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@3b170235
+2016-09-10 23:55:21.138::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@4ae8fb2a
+2016-09-10 23:55:21.138::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@4ae8fb2a
+2016-09-10 23:55:21.140::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@46612bfc
+2016-09-10 23:55:21.140::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@46612bfc
+2016-09-10 23:55:21.141::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@9263c54
+2016-09-10 23:55:21.141::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@9263c54
+2016-09-10 23:55:21.143::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@6befbb12
+2016-09-10 23:55:21.143::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@6befbb12
+2016-09-10 23:55:21.143::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@6befbb12
+2016-09-10 23:55:21.240::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@33bdd01
+2016-09-10 23:55:21.242::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@642c6461
+2016-09-10 23:55:21.242::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@642c6461
+2016-09-10 23:55:21.242::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@642c6461
+2016-09-10 23:55:21.243::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@17216605
+2016-09-10 23:55:21.244::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@11826398
+2016-09-10 23:55:21.244::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@11826398
+2016-09-10 23:55:21.245::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@1144a02b
+2016-09-10 23:55:21.245::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@1144a02b
+2016-09-10 23:55:21.246::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@70b33256
+2016-09-10 23:55:21.246::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@70b33256
+2016-09-10 23:55:21.247::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@410fc508
+2016-09-10 23:55:21.247::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@410fc508
+2016-09-10 23:55:21.250::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@38087342
+2016-09-10 23:55:21.250::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@38087342
+2016-09-10 23:55:21.250::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@2674d4f6
+2016-09-10 23:55:21.253::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@4e974b9e
+2016-09-10 23:55:21.253::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@4e974b9e
+2016-09-10 23:55:21.253::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@4e974b9e
+2016-09-10 23:55:21.254::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@a056b26
+2016-09-10 23:55:21.254::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@a056b26
+2016-09-10 23:55:21.254::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@a056b26
+2016-09-10 23:55:21.256::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@7bf018dd
+2016-09-10 23:55:21.257::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@74c121d4
+2016-09-10 23:55:21.257::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@74c121d4
+2016-09-10 23:55:21.257::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@74c121d4
+2016-09-10 23:55:21.259::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@2ad7bd26
+2016-09-10 23:55:21.259::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@2ad7bd26
+2016-09-10 23:55:21.259::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@2ad7bd26
+2016-09-10 23:55:21.261::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@6793f752
+2016-09-10 23:55:21.262::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@1510b9a2
+2016-09-10 23:55:21.273::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@13ef7fa1
+2016-09-10 23:55:21.273::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@13ef7fa1
+2016-09-10 23:55:21.273::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@4e8598d9
+2016-09-10 23:55:21.277::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@307c59ea
+2016-09-10 23:55:21.277::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@307c59ea
+2016-09-10 23:55:21.280::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@591f6f83
+2016-09-10 23:55:21.281::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@591f6f83
+2016-09-10 23:55:21.281::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@24a04257
+2016-09-10 23:55:21.281::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@4bf4680c
+2016-09-10 23:55:21.282::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@177ede17
+2016-09-10 23:55:21.287::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@3f0ce0d1
+2016-09-10 23:55:21.287::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@3f0ce0d1
+2016-09-10 23:55:21.288::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@423f8a73
+2016-09-10 23:55:21.288::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@1aedf08d
+2016-09-10 23:55:21.288::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@113dcaf8
+2016-09-10 23:55:21.288::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@b5d9f1e
+2016-09-10 23:55:21.289::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@350ff014
+2016-09-10 23:55:21.289::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@401317a0
+2016-09-10 23:55:21.290::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@3f866f50
+2016-09-10 23:55:21.290::DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@5844a2d1
+2016-09-10 23:55:21.623::WARN  org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata : Cannot create PoolableConnectionFactory (Access denied for user 'root'@'localhost' (using password: YES))
+2016-09-10 23:55:21.644::INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-10 23:55:21.663::DEBUG org.hibernate.engine.jdbc.env.spi.IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+2016-09-10 23:55:21.670::INFO  org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl - HHH000422: Disabling contextual LOB creation as connection was null
+2016-09-10 23:55:21.716::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2016-09-10 23:55:21.717::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2016-09-10 23:55:21.717::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2016-09-10 23:55:21.718::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2016-09-10 23:55:21.718::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2016-09-10 23:55:21.719::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2016-09-10 23:55:21.719::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2016-09-10 23:55:21.720::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2016-09-10 23:55:21.721::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2016-09-10 23:55:21.722::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2016-09-10 23:55:21.722::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2016-09-10 23:55:21.723::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2016-09-10 23:55:21.723::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2016-09-10 23:55:21.724::DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2016-09-10 23:55:21.757::DEBUG org.hibernate.boot.model.relational.Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2016-09-10 23:55:21.790::DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.comp.todo.model.Role
+2016-09-10 23:55:21.818::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2016-09-10 23:55:21.824::DEBUG org.hibernate.cfg.annotations.EntityBinder - Import with entity name Role
+2016-09-10 23:55:21.827::DEBUG org.hibernate.cfg.annotations.EntityBinder - Bind entity com.comp.todo.model.Role on table ROLE
+2016-09-10 23:55:21.852::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ROLE), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.857::DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+2016-09-10 23:55:21.859::DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.comp.todo.model.Role:id]
+2016-09-10 23:55:21.860::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for id
+2016-09-10 23:55:21.862::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property id
+2016-09-10 23:55:21.866::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ROLE), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.866::DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property name with lazy=false
+2016-09-10 23:55:21.866::DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.comp.todo.model.Role:name]
+2016-09-10 23:55:21.866::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for name
+2016-09-10 23:55:21.866::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property name
+2016-09-10 23:55:21.868::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='role'}
+2016-09-10 23:55:21.869::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ROLE), mappingColumn=users, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.871::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ROLE), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.881::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ROLE), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.881::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ROLE), mappingColumn=users_KEY, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.882::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='users_KEY', referencedColumn='null', mappedBy='null'}
+2016-09-10 23:55:21.883::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='role'}
+2016-09-10 23:55:21.883::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='role'}
+2016-09-10 23:55:21.884::DEBUG org.hibernate.cfg.annotations.CollectionBinder - Collection role: com.comp.todo.model.Role.users
+2016-09-10 23:55:21.887::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property users
+2016-09-10 23:55:21.888::DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.comp.todo.model.Todo
+2016-09-10 23:55:21.889::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2016-09-10 23:55:21.889::DEBUG org.hibernate.cfg.annotations.EntityBinder - Import with entity name Todo
+2016-09-10 23:55:21.889::DEBUG org.hibernate.cfg.annotations.EntityBinder - Bind entity com.comp.todo.model.Todo on table TODO
+2016-09-10 23:55:21.893::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(TODO), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.894::DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+2016-09-10 23:55:21.894::DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.comp.todo.model.Todo:id]
+2016-09-10 23:55:21.894::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for id
+2016-09-10 23:55:21.894::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property id
+2016-09-10 23:55:21.894::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(TODO), mappingColumn=date_created, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.895::DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property dateCreated with lazy=false
+2016-09-10 23:55:21.895::DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.comp.todo.model.Todo:dateCreated]
+2016-09-10 23:55:21.895::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for dateCreated
+2016-09-10 23:55:21.895::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property dateCreated
+2016-09-10 23:55:21.895::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(TODO), mappingColumn=date_updated, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.895::DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property dateUpdated with lazy=false
+2016-09-10 23:55:21.895::DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.comp.todo.model.Todo:dateUpdated]
+2016-09-10 23:55:21.895::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for dateUpdated
+2016-09-10 23:55:21.896::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property dateUpdated
+2016-09-10 23:55:21.896::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(TODO), mappingColumn=is_done, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.896::DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property isDone with lazy=false
+2016-09-10 23:55:21.896::DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.comp.todo.model.Todo:isDone]
+2016-09-10 23:55:21.896::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for isDone
+2016-09-10 23:55:21.896::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property isDone
+2016-09-10 23:55:21.896::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(TODO), mappingColumn=note, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.897::DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property note with lazy=false
+2016-09-10 23:55:21.897::DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.comp.todo.model.Todo:note]
+2016-09-10 23:55:21.897::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for note
+2016-09-10 23:55:21.897::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property note
+2016-09-10 23:55:21.897::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='user_id', referencedColumn='', mappedBy=''}
+2016-09-10 23:55:21.897::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(TODO), mappingColumn=user, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.901::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property user
+2016-09-10 23:55:21.901::DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.comp.todo.model.User
+2016-09-10 23:55:21.901::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2016-09-10 23:55:21.901::DEBUG org.hibernate.cfg.annotations.EntityBinder - Import with entity name User
+2016-09-10 23:55:21.902::DEBUG org.hibernate.cfg.annotations.EntityBinder - Bind entity com.comp.todo.model.User on table USER
+2016-09-10 23:55:21.906::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.907::DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+2016-09-10 23:55:21.907::DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.comp.todo.model.User:id]
+2016-09-10 23:55:21.907::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for id
+2016-09-10 23:55:21.907::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property id
+2016-09-10 23:55:21.907::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER), mappingColumn=email, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.907::DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property email with lazy=false
+2016-09-10 23:55:21.907::DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.comp.todo.model.User:email]
+2016-09-10 23:55:21.908::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for email
+2016-09-10 23:55:21.908::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property email
+2016-09-10 23:55:21.908::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER), mappingColumn=first_name, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.908::DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property firstName with lazy=false
+2016-09-10 23:55:21.908::DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.comp.todo.model.User:firstName]
+2016-09-10 23:55:21.908::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for firstName
+2016-09-10 23:55:21.908::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property firstName
+2016-09-10 23:55:21.908::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER), mappingColumn=last_name, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.909::DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property lastName with lazy=false
+2016-09-10 23:55:21.909::DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.comp.todo.model.User:lastName]
+2016-09-10 23:55:21.909::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for lastName
+2016-09-10 23:55:21.909::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property lastName
+2016-09-10 23:55:21.909::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER), mappingColumn=password, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.909::DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property password with lazy=false
+2016-09-10 23:55:21.909::DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.comp.todo.model.User:password]
+2016-09-10 23:55:21.909::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for password
+2016-09-10 23:55:21.909::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property password
+2016-09-10 23:55:21.910::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='role_id', referencedColumn='', mappedBy=''}
+2016-09-10 23:55:21.910::DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER), mappingColumn=role, insertable=true, updatable=true, unique=false}
+2016-09-10 23:55:21.910::DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property role
+2016-09-10 23:55:21.911::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+2016-09-10 23:55:21.911::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for name
+2016-09-10 23:55:21.912::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+2016-09-10 23:55:21.912::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for dateCreated
+2016-09-10 23:55:21.912::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for dateUpdated
+2016-09-10 23:55:21.912::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for isDone
+2016-09-10 23:55:21.912::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for note
+2016-09-10 23:55:21.912::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+2016-09-10 23:55:21.912::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for email
+2016-09-10 23:55:21.912::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for firstName
+2016-09-10 23:55:21.912::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for lastName
+2016-09-10 23:55:21.912::DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for password
+2016-09-10 23:55:21.918::DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [role]
+2016-09-10 23:55:21.918::DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [todo]
+2016-09-10 23:55:21.918::DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [user]
+2016-09-10 23:55:21.918::DEBUG org.hibernate.cfg.CollectionSecondPass - Second pass for collection: com.comp.todo.model.Role.users
+2016-09-10 23:55:21.919::DEBUG org.hibernate.cfg.annotations.CollectionBinder - Binding a OneToMany: com.comp.todo.model.Role.users through a foreign key
+2016-09-10 23:55:21.920::DEBUG org.hibernate.cfg.annotations.CollectionBinder - Mapping collection: com.comp.todo.model.Role.users -> USER
+2016-09-10 23:55:21.922::DEBUG org.hibernate.cfg.annotations.TableBinder - Retrieving property com.comp.todo.model.User.role
+2016-09-10 23:55:21.922::DEBUG org.hibernate.cfg.CollectionSecondPass - Mapped collection key: role_id, one-to-many: com.comp.todo.model.User
+2016-09-10 23:55:21.922::DEBUG org.hibernate.boot.internal.InFlightMetadataCollectorImpl - Resolving reference to class: com.comp.todo.model.User
+2016-09-10 23:55:21.924::DEBUG org.hibernate.boot.internal.InFlightMetadataCollectorImpl - Resolving reference to class: com.comp.todo.model.Role
+2016-09-10 23:55:21.925::DEBUG org.hibernate.boot.internal.InFlightMetadataCollectorImpl - Resolving reference to class: com.comp.todo.model.User
+2016-09-10 23:55:21.925::DEBUG org.hibernate.boot.internal.InFlightMetadataCollectorImpl - Resolving reference to class: com.comp.todo.model.Role
+2016-09-10 23:55:21.963::DEBUG org.hibernate.internal.SessionFactoryImpl - Building session factory
+2016-09-10 23:55:21.964::DEBUG org.hibernate.cfg.Settings - SessionFactory name : null
+2016-09-10 23:55:21.964::DEBUG org.hibernate.cfg.Settings - Automatic flush during beforeCompletion(): disabled
+2016-09-10 23:55:21.964::DEBUG org.hibernate.cfg.Settings - Automatic session close at end of transaction: disabled
+2016-09-10 23:55:21.964::DEBUG org.hibernate.cfg.Settings - Statistics: disabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Deleted entity synthetic identifier rollback: disabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Default entity-mode: pojo
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Allow initialization of lazy state outside session : disabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Using BatchFetchStyle : LEGACY
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Default batch fetch size: -1
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Maximum outer join fetch depth: 2
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Default null ordering: NONE
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Order SQL updates by primary key: disabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Order SQL inserts for batching: disabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - multi-tenancy strategy : NONE
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - JTA Track by Thread: enabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Query language substitutions: {}
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - JPA query language strict compliance: disabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Named query checking : enabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Second-level cache: enabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Second-level query cache: disabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@1209a0f
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Second-level cache region prefix: null
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Optimize second-level cache for minimal puts: disabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Structured second-level cache entries: disabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Second-level cache direct-reference entries: disabled
+2016-09-10 23:55:21.965::DEBUG org.hibernate.cfg.Settings - Automatic eviction of collection cache: disabled
+2016-09-10 23:55:21.966::DEBUG org.hibernate.cfg.Settings - JDBC batch size: 0
+2016-09-10 23:55:21.966::DEBUG org.hibernate.cfg.Settings - JDBC batch updates for versioned data: enabled
+2016-09-10 23:55:21.966::DEBUG org.hibernate.cfg.Settings - Scrollable result sets: disabled
+2016-09-10 23:55:21.966::DEBUG org.hibernate.cfg.Settings - Wrap result sets: disabled
+2016-09-10 23:55:21.966::DEBUG org.hibernate.cfg.Settings - JDBC3 getGeneratedKeys(): disabled
+2016-09-10 23:55:21.966::DEBUG org.hibernate.cfg.Settings - JDBC result set fetch size: null
+2016-09-10 23:55:21.966::DEBUG org.hibernate.cfg.Settings - Connection release mode: ON_CLOSE
+2016-09-10 23:55:21.966::DEBUG org.hibernate.cfg.Settings - Generate SQL with comments: disabled
+2016-09-10 23:55:22.019::DEBUG org.hibernate.internal.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+2016-09-10 23:55:22.019::DEBUG org.hibernate.internal.SessionFactoryImpl - Instantiating session factory with properties: {java.vendor=Oracle Corporation, sun.java.launcher=SUN_STANDARD, catalina.base=D:\todo_app\todoWebService\target\tomcat, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, catalina.useNaming=true, os.name=Windows 8.1, sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_101\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_101\jre\classes, hibernate.current_session_context_class=org.springframework.orm.hibernate5.SpringSessionContext, sun.desktop=windows, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.8.0_101-b13, user.name=fealrone.alajas, shared.loader=, guice.disable.misplaced.annotation.check=true, tomcat.util.buf.StringCache.byte.enabled=true, user.language=en, java.naming.factory.initial=org.apache.naming.java.javaURLContextFactory, sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_101\jre\bin, classworlds.conf=C:\Users\fealrone.alajas\Documents\workspace-sts-3.8.1.RELEASE\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6308525783158537524.tmp, java.version=1.8.0_101, user.timezone=Asia/Shanghai, sun.arch.data.model=64, java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_101\jre\lib\endorsed, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1252, file.encoding.pkg=sun.io, package.access=sun.,org.apache.catalina.,org.apache.coyote.,org.apache.tomcat.,org.apache.jasper.,sun.beans., file.separator=\, java.specification.name=Java Platform API Specification, java.class.version=52.0, user.country=US, java.home=C:\Program Files\Java\jdk1.8.0_101\jre, java.vm.info=mixed mode, os.version=6.3, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@1e471884, hibernate.connection.datasource=org.apache.commons.dbcp.BasicDataSource@27261190, path.separator=;, java.vm.version=25.101-b13, user.variant=, hibernate.classLoaders=[WebappClassLoader
+  context: /todo
+  delegate: false
+  repositories:
+----------> Parent Classloader:
+ClassRealm[plugin>org.codehaus.mojo:tomcat-maven-plugin:1.1, parent: sun.misc.Launcher$AppClassLoader@5c647e05]
+], java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.windows.WToolkit, package.definition=sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.tomcat.,org.apache.jasper., user.script=, java.naming.factory.url.pkgs=org.apache.naming, user.home=C:\Users\fealrone.alajas, java.specification.vendor=Oracle Corporation, hibernate.hbm2ddl.auto=update, java.library.path=C:\Program Files\Java\jdk1.8.0_101\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_101/bin/server;C:/Program Files/Java/jre1.8.0_101/bin;C:/Program Files/Java/jre1.8.0_101/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\IBM\MQ\java\lib;C:\Program Files\IBM\MQ\java\lib64;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\TortoiseSVN\bin;C:\Windows\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\; C:\Windows\System32\curl-7.19.7\src;C:\Program Files\nodejs\;C:\Program Files\IBM\MQ\bin64;C:\Program Files\IBM\MQ\bin;C:\Program Files\IBM\MQ\tools\c\samples\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 & MySQL Utilities 1.5\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 & MySQL Utilities 1.5\Doctrine extensions for PHP\;D:\spring-tool-suite-3.8.1.RELEASE-e4.6-win32-x86_64\sts-bundle\sts-3.8.1.RELEASE;;., java.vendor.url=http://java.oracle.com/, java.vm.vendor=Oracle Corporation, hibernate.dialect=org.hibernate.dialect.MySQLDialect, common.loader=D:\todo_app\todoWebService\target\tomcat/lib,D:\todo_app\todoWebService\target\tomcat/lib/*.jar, maven.home=D:\todo_app\todoWebService\EMBEDDED, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -B clean install tomcat:run, java.class.path=/D:/spring-tool-suite-3.8.1.RELEASE-e4.6-win32-x86_64/sts-bundle/sts-3.8.1.RELEASE/plugins/org.eclipse.m2e.maven.runtime_1.7.0.20160603-1931/jars/plexus-classworlds-2.5.2.jar, hibernate.bytecode.use_reflection_optimizer=false, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.8, catalina.home=D:\todo_app\todoWebService\target\tomcat, sun.cpu.endian=little, sun.os.patch.level=, java.io.tmpdir=C:\Users\FEALRO~1.ALA\AppData\Local\Temp\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, maven.multiModuleProjectDirectory=D:\todo_app\todoWebService, server.loader=, os.arch=amd64, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.ext.dirs=C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, user.dir=D:\todo_app\todoWebService, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding=Cp1252, java.specification.version=1.8, hibernate.show_sql=false}
+2016-09-10 23:55:22.030::DEBUG org.hibernate.secure.spi.JaccIntegrator - Skipping JACC integration as it was not enabled
+2016-09-10 23:55:22.063::DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.comp.todo.model.User] is safe
+2016-09-10 23:55:22.063::DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.comp.todo.model.User
+2016-09-10 23:55:22.101::DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.comp.todo.model.User] is safe
+2016-09-10 23:55:22.101::DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.comp.todo.model.User
+2016-09-10 23:55:22.254::DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.comp.todo.model.Role] is safe
+2016-09-10 23:55:22.254::DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.comp.todo.model.Role
+2016-09-10 23:55:22.256::DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.comp.todo.model.Role] is safe
+2016-09-10 23:55:22.256::DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.comp.todo.model.Role
+2016-09-10 23:55:22.258::DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.comp.todo.model.Todo] is safe
+2016-09-10 23:55:22.258::DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.comp.todo.model.Todo
+2016-09-10 23:55:22.259::DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.comp.todo.model.Todo] is safe
+2016-09-10 23:55:22.259::DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.comp.todo.model.Todo
+2016-09-10 23:55:22.272::DEBUG org.hibernate.persister.collection.AbstractCollectionPersister - Static SQL for collection: com.comp.todo.model.Role.users
+2016-09-10 23:55:22.272::DEBUG org.hibernate.persister.collection.AbstractCollectionPersister -  Row insert: update USER set role_id=? where id=?
+2016-09-10 23:55:22.272::DEBUG org.hibernate.persister.collection.AbstractCollectionPersister -  Row update: update USER set  where id=?
+2016-09-10 23:55:22.272::DEBUG org.hibernate.persister.collection.AbstractCollectionPersister -  Row delete: update USER set role_id=null where role_id=? and id=?
+2016-09-10 23:55:22.272::DEBUG org.hibernate.persister.collection.AbstractCollectionPersister -  One-shot delete: update USER set role_id=null where role_id=?
+2016-09-10 23:55:22.276::DEBUG org.hibernate.persister.entity.AbstractEntityPersister - Static SQL for entity: com.comp.todo.model.User
+2016-09-10 23:55:22.277::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Version select: select id from USER where id =?
+2016-09-10 23:55:22.277::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Snapshot select: select user_.id, user_.email as email2_2_, user_.first_name as first_na3_2_, user_.last_name as last_nam4_2_, user_.password as password5_2_, user_.role_id as role_id6_2_ from USER user_ where user_.id=?
+2016-09-10 23:55:22.277::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Insert 0: insert into USER (email, first_name, last_name, password, role_id, id) values (?, ?, ?, ?, ?, ?)
+2016-09-10 23:55:22.277::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Update 0: update USER set email=?, first_name=?, last_name=?, password=?, role_id=? where id=?
+2016-09-10 23:55:22.277::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Delete 0: delete from USER where id=?
+2016-09-10 23:55:22.312::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5fe5c68b]
+2016-09-10 23:55:22.314::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+2016-09-10 23:55:22.314::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+2016-09-10 23:55:22.314::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+2016-09-10 23:55:22.314::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+2016-09-10 23:55:22.315::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+2016-09-10 23:55:22.323::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@38fb151a]
+2016-09-10 23:55:22.325::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role.name
+2016-09-10 23:55:22.325::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role.users
+2016-09-10 23:55:22.326::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Property path deemed to be circular : role.users
+2016-09-10 23:55:22.326::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.351::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.360::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.User, querySpaceUid=<gen:0>, path=com.comp.todo.model.User)
+          - EntityAttributeFetchImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:1>, path=com.comp.todo.model.User.role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+          - JOIN (JoinDefinedByMetadata(role)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.comp.todo.model.Role)
+                - SQL table alias mapping - role1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+
+2016-09-10 23:55:22.362::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.User [NONE]: select user0_.id as id1_2_0_, user0_.email as email2_2_0_, user0_.first_name as first_na3_2_0_, user0_.last_name as last_nam4_2_0_, user0_.password as password5_2_0_, user0_.role_id as role_id6_2_0_, role1_.id as id1_0_1_, role1_.name as name2_0_1_ from USER user0_ left outer join ROLE role1_ on user0_.role_id=role1_.id where user0_.id=?
+2016-09-10 23:55:22.363::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@154864f8]
+2016-09-10 23:55:22.363::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+2016-09-10 23:55:22.363::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+2016-09-10 23:55:22.363::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+2016-09-10 23:55:22.363::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+2016-09-10 23:55:22.363::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+2016-09-10 23:55:22.363::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6d3ad37a]
+2016-09-10 23:55:22.363::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role.name
+2016-09-10 23:55:22.363::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role.users
+2016-09-10 23:55:22.363::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Property path deemed to be circular : role.users
+2016-09-10 23:55:22.363::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.363::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.364::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.User, querySpaceUid=<gen:0>, path=com.comp.todo.model.User)
+          - EntityAttributeFetchImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:1>, path=com.comp.todo.model.User.role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+          - JOIN (JoinDefinedByMetadata(role)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.comp.todo.model.Role)
+                - SQL table alias mapping - role1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+
+2016-09-10 23:55:22.364::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.User [READ]: select user0_.id as id1_2_0_, user0_.email as email2_2_0_, user0_.first_name as first_na3_2_0_, user0_.last_name as last_nam4_2_0_, user0_.password as password5_2_0_, user0_.role_id as role_id6_2_0_, role1_.id as id1_0_1_, role1_.name as name2_0_1_ from USER user0_ left outer join ROLE role1_ on user0_.role_id=role1_.id where user0_.id=?
+2016-09-10 23:55:22.364::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@704c3bdf]
+2016-09-10 23:55:22.364::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+2016-09-10 23:55:22.364::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+2016-09-10 23:55:22.364::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+2016-09-10 23:55:22.364::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+2016-09-10 23:55:22.364::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+2016-09-10 23:55:22.364::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@c82d925]
+2016-09-10 23:55:22.364::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.364::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.364::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.User, querySpaceUid=<gen:0>, path=com.comp.todo.model.User)
+          - EntityAttributeFetchImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:1>, path=com.comp.todo.model.User.role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2016-09-10 23:55:22.365::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.User [UPGRADE]: select user0_.id as id1_2_0_, user0_.email as email2_2_0_, user0_.first_name as first_na3_2_0_, user0_.last_name as last_nam4_2_0_, user0_.password as password5_2_0_, user0_.role_id as role_id6_2_0_ from USER user0_ where user0_.id=? for update
+2016-09-10 23:55:22.365::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@55c03e4]
+2016-09-10 23:55:22.365::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+2016-09-10 23:55:22.365::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+2016-09-10 23:55:22.365::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+2016-09-10 23:55:22.365::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+2016-09-10 23:55:22.365::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+2016-09-10 23:55:22.365::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@605eb072]
+2016-09-10 23:55:22.365::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.365::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.365::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.User, querySpaceUid=<gen:0>, path=com.comp.todo.model.User)
+          - EntityAttributeFetchImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:1>, path=com.comp.todo.model.User.role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2016-09-10 23:55:22.365::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.User [UPGRADE_NOWAIT]: select user0_.id as id1_2_0_, user0_.email as email2_2_0_, user0_.first_name as first_na3_2_0_, user0_.last_name as last_nam4_2_0_, user0_.password as password5_2_0_, user0_.role_id as role_id6_2_0_ from USER user0_ where user0_.id=? for update
+2016-09-10 23:55:22.365::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7a0f06ad]
+2016-09-10 23:55:22.366::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+2016-09-10 23:55:22.366::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+2016-09-10 23:55:22.366::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+2016-09-10 23:55:22.366::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+2016-09-10 23:55:22.366::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+2016-09-10 23:55:22.366::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@710afd47]
+2016-09-10 23:55:22.366::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.366::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.366::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.User, querySpaceUid=<gen:0>, path=com.comp.todo.model.User)
+          - EntityAttributeFetchImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:1>, path=com.comp.todo.model.User.role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2016-09-10 23:55:22.366::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.User [UPGRADE_SKIPLOCKED]: select user0_.id as id1_2_0_, user0_.email as email2_2_0_, user0_.first_name as first_na3_2_0_, user0_.last_name as last_nam4_2_0_, user0_.password as password5_2_0_, user0_.role_id as role_id6_2_0_ from USER user0_ where user0_.id=? for update
+2016-09-10 23:55:22.366::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@64420e34]
+2016-09-10 23:55:22.366::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+2016-09-10 23:55:22.366::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+2016-09-10 23:55:22.366::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+2016-09-10 23:55:22.366::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+2016-09-10 23:55:22.366::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+2016-09-10 23:55:22.367::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@324e8baa]
+2016-09-10 23:55:22.367::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.367::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.367::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.User, querySpaceUid=<gen:0>, path=com.comp.todo.model.User)
+          - EntityAttributeFetchImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:1>, path=com.comp.todo.model.User.role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2016-09-10 23:55:22.367::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.User [FORCE]: select user0_.id as id1_2_0_, user0_.email as email2_2_0_, user0_.first_name as first_na3_2_0_, user0_.last_name as last_nam4_2_0_, user0_.password as password5_2_0_, user0_.role_id as role_id6_2_0_ from USER user0_ where user0_.id=? for update
+2016-09-10 23:55:22.367::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1488a861]
+2016-09-10 23:55:22.367::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+2016-09-10 23:55:22.367::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+2016-09-10 23:55:22.367::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+2016-09-10 23:55:22.367::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+2016-09-10 23:55:22.367::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+2016-09-10 23:55:22.367::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5432dca2]
+2016-09-10 23:55:22.368::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.368::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.368::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.User, querySpaceUid=<gen:0>, path=com.comp.todo.model.User)
+          - EntityAttributeFetchImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:1>, path=com.comp.todo.model.User.role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2016-09-10 23:55:22.368::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.User [PESSIMISTIC_READ]: select user0_.id as id1_2_0_, user0_.email as email2_2_0_, user0_.first_name as first_na3_2_0_, user0_.last_name as last_nam4_2_0_, user0_.password as password5_2_0_, user0_.role_id as role_id6_2_0_ from USER user0_ where user0_.id=? lock in share mode
+2016-09-10 23:55:22.368::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@12670e55]
+2016-09-10 23:55:22.369::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+2016-09-10 23:55:22.369::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+2016-09-10 23:55:22.369::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+2016-09-10 23:55:22.369::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+2016-09-10 23:55:22.369::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+2016-09-10 23:55:22.369::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5a90fcaa]
+2016-09-10 23:55:22.369::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.371::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.371::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.User, querySpaceUid=<gen:0>, path=com.comp.todo.model.User)
+          - EntityAttributeFetchImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:1>, path=com.comp.todo.model.User.role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2016-09-10 23:55:22.372::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.User [PESSIMISTIC_WRITE]: select user0_.id as id1_2_0_, user0_.email as email2_2_0_, user0_.first_name as first_na3_2_0_, user0_.last_name as last_nam4_2_0_, user0_.password as password5_2_0_, user0_.role_id as role_id6_2_0_ from USER user0_ where user0_.id=? for update
+2016-09-10 23:55:22.372::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1805ec96]
+2016-09-10 23:55:22.372::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+2016-09-10 23:55:22.372::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+2016-09-10 23:55:22.372::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+2016-09-10 23:55:22.372::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+2016-09-10 23:55:22.372::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+2016-09-10 23:55:22.372::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1ad1be5d]
+2016-09-10 23:55:22.372::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.373::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.373::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.User, querySpaceUid=<gen:0>, path=com.comp.todo.model.User)
+          - EntityAttributeFetchImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:1>, path=com.comp.todo.model.User.role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2016-09-10 23:55:22.373::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.User [PESSIMISTIC_FORCE_INCREMENT]: select user0_.id as id1_2_0_, user0_.email as email2_2_0_, user0_.first_name as first_na3_2_0_, user0_.last_name as last_nam4_2_0_, user0_.password as password5_2_0_, user0_.role_id as role_id6_2_0_ from USER user0_ where user0_.id=? for update
+2016-09-10 23:55:22.373::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@47797401]
+2016-09-10 23:55:22.373::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+2016-09-10 23:55:22.373::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+2016-09-10 23:55:22.373::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+2016-09-10 23:55:22.373::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+2016-09-10 23:55:22.373::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+2016-09-10 23:55:22.374::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@10166230]
+2016-09-10 23:55:22.374::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.374::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.374::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.User, querySpaceUid=<gen:0>, path=com.comp.todo.model.User)
+          - EntityAttributeFetchImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:1>, path=com.comp.todo.model.User.role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2016-09-10 23:55:22.374::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.User [OPTIMISTIC]: select user0_.id as id1_2_0_, user0_.email as email2_2_0_, user0_.first_name as first_na3_2_0_, user0_.last_name as last_nam4_2_0_, user0_.password as password5_2_0_, user0_.role_id as role_id6_2_0_ from USER user0_ where user0_.id=?
+2016-09-10 23:55:22.374::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7221539]
+2016-09-10 23:55:22.375::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+2016-09-10 23:55:22.375::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+2016-09-10 23:55:22.375::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+2016-09-10 23:55:22.375::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+2016-09-10 23:55:22.375::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+2016-09-10 23:55:22.375::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@15be68b]
+2016-09-10 23:55:22.375::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.375::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.375::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.User, querySpaceUid=<gen:0>, path=com.comp.todo.model.User)
+          - EntityAttributeFetchImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:1>, path=com.comp.todo.model.User.role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2016-09-10 23:55:22.375::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.User [OPTIMISTIC_FORCE_INCREMENT]: select user0_.id as id1_2_0_, user0_.email as email2_2_0_, user0_.first_name as first_na3_2_0_, user0_.last_name as last_nam4_2_0_, user0_.password as password5_2_0_, user0_.role_id as role_id6_2_0_ from USER user0_ where user0_.id=?
+2016-09-10 23:55:22.408::DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity com.comp.todo.model.User: select user0_.id as id1_2_0_, user0_.email as email2_2_0_, user0_.first_name as first_na3_2_0_, user0_.last_name as last_nam4_2_0_, user0_.password as password5_2_0_, user0_.role_id as role_id6_2_0_ from USER user0_ where user0_.id=?
+2016-09-10 23:55:22.408::DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity com.comp.todo.model.User: select user0_.id as id1_2_0_, user0_.email as email2_2_0_, user0_.first_name as first_na3_2_0_, user0_.last_name as last_nam4_2_0_, user0_.password as password5_2_0_, user0_.role_id as role_id6_2_0_ from USER user0_ where user0_.id=?
+2016-09-10 23:55:22.408::DEBUG org.hibernate.persister.entity.AbstractEntityPersister - Static SQL for entity: com.comp.todo.model.Role
+2016-09-10 23:55:22.408::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Version select: select id from ROLE where id =?
+2016-09-10 23:55:22.408::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Snapshot select: select role_.id, role_.name as name2_0_ from ROLE role_ where role_.id=?
+2016-09-10 23:55:22.408::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Insert 0: insert into ROLE (name, id) values (?, ?)
+2016-09-10 23:55:22.408::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Update 0: update ROLE set name=? where id=?
+2016-09-10 23:55:22.408::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Delete 0: delete from ROLE where id=?
+2016-09-10 23:55:22.409::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@64f3991e]
+2016-09-10 23:55:22.409::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : name
+2016-09-10 23:55:22.409::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : users
+2016-09-10 23:55:22.409::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.409::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.409::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:0>, path=com.comp.todo.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-09-10 23:55:22.410::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Role [NONE]: select role0_.id as id1_0_0_, role0_.name as name2_0_0_ from ROLE role0_ where role0_.id=?
+2016-09-10 23:55:22.410::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@35e689a0]
+2016-09-10 23:55:22.410::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : name
+2016-09-10 23:55:22.410::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : users
+2016-09-10 23:55:22.410::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.410::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.410::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:0>, path=com.comp.todo.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-09-10 23:55:22.410::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Role [READ]: select role0_.id as id1_0_0_, role0_.name as name2_0_0_ from ROLE role0_ where role0_.id=?
+2016-09-10 23:55:22.411::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3bf5911d]
+2016-09-10 23:55:22.411::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : name
+2016-09-10 23:55:22.411::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : users
+2016-09-10 23:55:22.411::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.411::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.411::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:0>, path=com.comp.todo.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-09-10 23:55:22.411::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Role [UPGRADE]: select role0_.id as id1_0_0_, role0_.name as name2_0_0_ from ROLE role0_ where role0_.id=? for update
+2016-09-10 23:55:22.411::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1cc93da4]
+2016-09-10 23:55:22.412::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : name
+2016-09-10 23:55:22.412::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : users
+2016-09-10 23:55:22.412::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.412::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.412::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:0>, path=com.comp.todo.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-09-10 23:55:22.412::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Role [UPGRADE_NOWAIT]: select role0_.id as id1_0_0_, role0_.name as name2_0_0_ from ROLE role0_ where role0_.id=? for update
+2016-09-10 23:55:22.412::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7e38e254]
+2016-09-10 23:55:22.412::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : name
+2016-09-10 23:55:22.413::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : users
+2016-09-10 23:55:22.413::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.413::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.413::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:0>, path=com.comp.todo.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-09-10 23:55:22.413::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Role [UPGRADE_SKIPLOCKED]: select role0_.id as id1_0_0_, role0_.name as name2_0_0_ from ROLE role0_ where role0_.id=? for update
+2016-09-10 23:55:22.413::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@503a7990]
+2016-09-10 23:55:22.414::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : name
+2016-09-10 23:55:22.414::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : users
+2016-09-10 23:55:22.414::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.414::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.414::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:0>, path=com.comp.todo.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-09-10 23:55:22.414::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Role [FORCE]: select role0_.id as id1_0_0_, role0_.name as name2_0_0_ from ROLE role0_ where role0_.id=? for update
+2016-09-10 23:55:22.414::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6dcbbb49]
+2016-09-10 23:55:22.414::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : name
+2016-09-10 23:55:22.414::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : users
+2016-09-10 23:55:22.414::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.414::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.415::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:0>, path=com.comp.todo.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-09-10 23:55:22.415::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Role [PESSIMISTIC_READ]: select role0_.id as id1_0_0_, role0_.name as name2_0_0_ from ROLE role0_ where role0_.id=? lock in share mode
+2016-09-10 23:55:22.415::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@36c783ca]
+2016-09-10 23:55:22.415::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : name
+2016-09-10 23:55:22.415::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : users
+2016-09-10 23:55:22.415::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.415::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.415::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:0>, path=com.comp.todo.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-09-10 23:55:22.415::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Role [PESSIMISTIC_WRITE]: select role0_.id as id1_0_0_, role0_.name as name2_0_0_ from ROLE role0_ where role0_.id=? for update
+2016-09-10 23:55:22.416::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@273293c8]
+2016-09-10 23:55:22.416::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : name
+2016-09-10 23:55:22.416::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : users
+2016-09-10 23:55:22.416::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.416::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.416::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:0>, path=com.comp.todo.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-09-10 23:55:22.416::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Role [PESSIMISTIC_FORCE_INCREMENT]: select role0_.id as id1_0_0_, role0_.name as name2_0_0_ from ROLE role0_ where role0_.id=? for update
+2016-09-10 23:55:22.416::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@ca2cd5e]
+2016-09-10 23:55:22.416::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : name
+2016-09-10 23:55:22.416::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : users
+2016-09-10 23:55:22.416::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.416::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.417::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:0>, path=com.comp.todo.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-09-10 23:55:22.417::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Role [OPTIMISTIC]: select role0_.id as id1_0_0_, role0_.name as name2_0_0_ from ROLE role0_ where role0_.id=?
+2016-09-10 23:55:22.417::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@333e5fb6]
+2016-09-10 23:55:22.417::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : name
+2016-09-10 23:55:22.417::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : users
+2016-09-10 23:55:22.417::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.417::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.417::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Role, querySpaceUid=<gen:0>, path=com.comp.todo.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-09-10 23:55:22.417::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Role [OPTIMISTIC_FORCE_INCREMENT]: select role0_.id as id1_0_0_, role0_.name as name2_0_0_ from ROLE role0_ where role0_.id=?
+2016-09-10 23:55:22.418::DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity com.comp.todo.model.Role: select role0_.id as id1_0_0_, role0_.name as name2_0_0_ from ROLE role0_ where role0_.id=?
+2016-09-10 23:55:22.418::DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity com.comp.todo.model.Role: select role0_.id as id1_0_0_, role0_.name as name2_0_0_ from ROLE role0_ where role0_.id=?
+2016-09-10 23:55:22.418::DEBUG org.hibernate.persister.entity.AbstractEntityPersister - Static SQL for entity: com.comp.todo.model.Todo
+2016-09-10 23:55:22.418::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Version select: select id from TODO where id =?
+2016-09-10 23:55:22.418::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Snapshot select: select todo_.id, todo_.date_created as date_cre2_1_, todo_.date_updated as date_upd3_1_, todo_.is_done as is_done4_1_, todo_.note as note5_1_, todo_.user_id as user_id6_1_ from TODO todo_ where todo_.id=?
+2016-09-10 23:55:22.418::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Insert 0: insert into TODO (date_created, date_updated, is_done, note, user_id, id) values (?, ?, ?, ?, ?, ?)
+2016-09-10 23:55:22.418::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Update 0: update TODO set date_created=?, date_updated=?, is_done=?, note=?, user_id=? where id=?
+2016-09-10 23:55:22.418::DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Delete 0: delete from TODO where id=?
+2016-09-10 23:55:22.418::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@21a9f95b]
+2016-09-10 23:55:22.419::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateCreated
+2016-09-10 23:55:22.419::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateUpdated
+2016-09-10 23:55:22.419::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : isDone
+2016-09-10 23:55:22.419::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : note
+2016-09-10 23:55:22.419::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+2016-09-10 23:55:22.419::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.419::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.419::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Todo)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Todo, querySpaceUid=<gen:0>, path=com.comp.todo.model.Todo)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Todo)
+          - SQL table alias mapping - todo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2016-09-10 23:55:22.419::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Todo [NONE]: select todo0_.id as id1_1_0_, todo0_.date_created as date_cre2_1_0_, todo0_.date_updated as date_upd3_1_0_, todo0_.is_done as is_done4_1_0_, todo0_.note as note5_1_0_, todo0_.user_id as user_id6_1_0_ from TODO todo0_ where todo0_.id=?
+2016-09-10 23:55:22.419::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@69069866]
+2016-09-10 23:55:22.419::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateCreated
+2016-09-10 23:55:22.419::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateUpdated
+2016-09-10 23:55:22.419::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : isDone
+2016-09-10 23:55:22.420::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : note
+2016-09-10 23:55:22.420::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+2016-09-10 23:55:22.420::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.420::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.420::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Todo)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Todo, querySpaceUid=<gen:0>, path=com.comp.todo.model.Todo)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Todo)
+          - SQL table alias mapping - todo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2016-09-10 23:55:22.420::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Todo [READ]: select todo0_.id as id1_1_0_, todo0_.date_created as date_cre2_1_0_, todo0_.date_updated as date_upd3_1_0_, todo0_.is_done as is_done4_1_0_, todo0_.note as note5_1_0_, todo0_.user_id as user_id6_1_0_ from TODO todo0_ where todo0_.id=?
+2016-09-10 23:55:22.420::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@64c95480]
+2016-09-10 23:55:22.420::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateCreated
+2016-09-10 23:55:22.420::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateUpdated
+2016-09-10 23:55:22.420::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : isDone
+2016-09-10 23:55:22.420::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : note
+2016-09-10 23:55:22.420::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+2016-09-10 23:55:22.420::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.420::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.421::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Todo)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Todo, querySpaceUid=<gen:0>, path=com.comp.todo.model.Todo)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Todo)
+          - SQL table alias mapping - todo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2016-09-10 23:55:22.421::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Todo [UPGRADE]: select todo0_.id as id1_1_0_, todo0_.date_created as date_cre2_1_0_, todo0_.date_updated as date_upd3_1_0_, todo0_.is_done as is_done4_1_0_, todo0_.note as note5_1_0_, todo0_.user_id as user_id6_1_0_ from TODO todo0_ where todo0_.id=? for update
+2016-09-10 23:55:22.421::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3451fc88]
+2016-09-10 23:55:22.421::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateCreated
+2016-09-10 23:55:22.421::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateUpdated
+2016-09-10 23:55:22.421::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : isDone
+2016-09-10 23:55:22.421::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : note
+2016-09-10 23:55:22.421::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+2016-09-10 23:55:22.421::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.421::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.421::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Todo)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Todo, querySpaceUid=<gen:0>, path=com.comp.todo.model.Todo)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Todo)
+          - SQL table alias mapping - todo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2016-09-10 23:55:22.421::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Todo [UPGRADE_NOWAIT]: select todo0_.id as id1_1_0_, todo0_.date_created as date_cre2_1_0_, todo0_.date_updated as date_upd3_1_0_, todo0_.is_done as is_done4_1_0_, todo0_.note as note5_1_0_, todo0_.user_id as user_id6_1_0_ from TODO todo0_ where todo0_.id=? for update
+2016-09-10 23:55:22.422::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3041beb3]
+2016-09-10 23:55:22.422::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateCreated
+2016-09-10 23:55:22.422::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateUpdated
+2016-09-10 23:55:22.422::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : isDone
+2016-09-10 23:55:22.422::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : note
+2016-09-10 23:55:22.422::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+2016-09-10 23:55:22.422::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.422::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.422::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Todo)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Todo, querySpaceUid=<gen:0>, path=com.comp.todo.model.Todo)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Todo)
+          - SQL table alias mapping - todo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2016-09-10 23:55:22.422::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Todo [UPGRADE_SKIPLOCKED]: select todo0_.id as id1_1_0_, todo0_.date_created as date_cre2_1_0_, todo0_.date_updated as date_upd3_1_0_, todo0_.is_done as is_done4_1_0_, todo0_.note as note5_1_0_, todo0_.user_id as user_id6_1_0_ from TODO todo0_ where todo0_.id=? for update
+2016-09-10 23:55:22.422::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2e40fdbd]
+2016-09-10 23:55:22.422::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateCreated
+2016-09-10 23:55:22.422::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateUpdated
+2016-09-10 23:55:22.422::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : isDone
+2016-09-10 23:55:22.422::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : note
+2016-09-10 23:55:22.422::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+2016-09-10 23:55:22.423::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.423::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.423::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Todo)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Todo, querySpaceUid=<gen:0>, path=com.comp.todo.model.Todo)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Todo)
+          - SQL table alias mapping - todo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2016-09-10 23:55:22.423::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Todo [FORCE]: select todo0_.id as id1_1_0_, todo0_.date_created as date_cre2_1_0_, todo0_.date_updated as date_upd3_1_0_, todo0_.is_done as is_done4_1_0_, todo0_.note as note5_1_0_, todo0_.user_id as user_id6_1_0_ from TODO todo0_ where todo0_.id=? for update
+2016-09-10 23:55:22.423::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@19647566]
+2016-09-10 23:55:22.423::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateCreated
+2016-09-10 23:55:22.423::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateUpdated
+2016-09-10 23:55:22.423::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : isDone
+2016-09-10 23:55:22.423::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : note
+2016-09-10 23:55:22.423::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+2016-09-10 23:55:22.423::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.423::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.424::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Todo)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Todo, querySpaceUid=<gen:0>, path=com.comp.todo.model.Todo)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Todo)
+          - SQL table alias mapping - todo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2016-09-10 23:55:22.424::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Todo [PESSIMISTIC_READ]: select todo0_.id as id1_1_0_, todo0_.date_created as date_cre2_1_0_, todo0_.date_updated as date_upd3_1_0_, todo0_.is_done as is_done4_1_0_, todo0_.note as note5_1_0_, todo0_.user_id as user_id6_1_0_ from TODO todo0_ where todo0_.id=? lock in share mode
+2016-09-10 23:55:22.424::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@527d48db]
+2016-09-10 23:55:22.424::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateCreated
+2016-09-10 23:55:22.424::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateUpdated
+2016-09-10 23:55:22.424::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : isDone
+2016-09-10 23:55:22.424::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : note
+2016-09-10 23:55:22.424::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+2016-09-10 23:55:22.424::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.424::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.424::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Todo)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Todo, querySpaceUid=<gen:0>, path=com.comp.todo.model.Todo)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Todo)
+          - SQL table alias mapping - todo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2016-09-10 23:55:22.424::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Todo [PESSIMISTIC_WRITE]: select todo0_.id as id1_1_0_, todo0_.date_created as date_cre2_1_0_, todo0_.date_updated as date_upd3_1_0_, todo0_.is_done as is_done4_1_0_, todo0_.note as note5_1_0_, todo0_.user_id as user_id6_1_0_ from TODO todo0_ where todo0_.id=? for update
+2016-09-10 23:55:22.424::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2335aef2]
+2016-09-10 23:55:22.424::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateCreated
+2016-09-10 23:55:22.424::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateUpdated
+2016-09-10 23:55:22.424::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : isDone
+2016-09-10 23:55:22.424::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : note
+2016-09-10 23:55:22.424::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+2016-09-10 23:55:22.425::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.425::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.425::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Todo)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Todo, querySpaceUid=<gen:0>, path=com.comp.todo.model.Todo)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Todo)
+          - SQL table alias mapping - todo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2016-09-10 23:55:22.425::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Todo [PESSIMISTIC_FORCE_INCREMENT]: select todo0_.id as id1_1_0_, todo0_.date_created as date_cre2_1_0_, todo0_.date_updated as date_upd3_1_0_, todo0_.is_done as is_done4_1_0_, todo0_.note as note5_1_0_, todo0_.user_id as user_id6_1_0_ from TODO todo0_ where todo0_.id=? for update
+2016-09-10 23:55:22.425::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2f038d3c]
+2016-09-10 23:55:22.425::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateCreated
+2016-09-10 23:55:22.425::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateUpdated
+2016-09-10 23:55:22.425::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : isDone
+2016-09-10 23:55:22.425::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : note
+2016-09-10 23:55:22.425::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+2016-09-10 23:55:22.425::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.425::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.426::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Todo)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Todo, querySpaceUid=<gen:0>, path=com.comp.todo.model.Todo)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Todo)
+          - SQL table alias mapping - todo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2016-09-10 23:55:22.426::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Todo [OPTIMISTIC]: select todo0_.id as id1_1_0_, todo0_.date_created as date_cre2_1_0_, todo0_.date_updated as date_upd3_1_0_, todo0_.is_done as is_done4_1_0_, todo0_.note as note5_1_0_, todo0_.user_id as user_id6_1_0_ from TODO todo0_ where todo0_.id=?
+2016-09-10 23:55:22.426::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@39a8e2fa]
+2016-09-10 23:55:22.426::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateCreated
+2016-09-10 23:55:22.426::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateUpdated
+2016-09-10 23:55:22.426::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : isDone
+2016-09-10 23:55:22.426::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : note
+2016-09-10 23:55:22.426::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+2016-09-10 23:55:22.426::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.426::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.426::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=com.comp.todo.model.Todo)
+    - Returns
+       - EntityReturnImpl(entity=com.comp.todo.model.Todo, querySpaceUid=<gen:0>, path=com.comp.todo.model.Todo)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.comp.todo.model.Todo)
+          - SQL table alias mapping - todo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2016-09-10 23:55:22.427::DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity com.comp.todo.model.Todo [OPTIMISTIC_FORCE_INCREMENT]: select todo0_.id as id1_1_0_, todo0_.date_created as date_cre2_1_0_, todo0_.date_updated as date_upd3_1_0_, todo0_.is_done as is_done4_1_0_, todo0_.note as note5_1_0_, todo0_.user_id as user_id6_1_0_ from TODO todo0_ where todo0_.id=?
+2016-09-10 23:55:22.427::DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity com.comp.todo.model.Todo: select todo0_.id as id1_1_0_, todo0_.date_created as date_cre2_1_0_, todo0_.date_updated as date_upd3_1_0_, todo0_.is_done as is_done4_1_0_, todo0_.note as note5_1_0_, todo0_.user_id as user_id6_1_0_ from TODO todo0_ where todo0_.id=?
+2016-09-10 23:55:22.427::DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity com.comp.todo.model.Todo: select todo0_.id as id1_1_0_, todo0_.date_created as date_cre2_1_0_, todo0_.date_updated as date_upd3_1_0_, todo0_.is_done as is_done4_1_0_, todo0_.note as note5_1_0_, todo0_.user_id as user_id6_1_0_ from TODO todo0_ where todo0_.id=?
+2016-09-10 23:55:22.437::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2fa212df]
+2016-09-10 23:55:22.438::DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3cf8a235]
+2016-09-10 23:55:22.439::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+2016-09-10 23:55:22.439::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : firstName
+2016-09-10 23:55:22.439::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : lastName
+2016-09-10 23:55:22.439::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+2016-09-10 23:55:22.440::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+2016-09-10 23:55:22.440::DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Property path deemed to be circular : role
+2016-09-10 23:55:22.440::DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+2016-09-10 23:55:22.445::DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+2016-09-10 23:55:22.446::DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(collection=com.comp.todo.model.Role.users)
+    - Returns
+       - CollectionReturnImpl(collection=com.comp.todo.model.Role.users, querySpaceUid=<gen:0>, path=[com.comp.todo.model.Role.users])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.comp.todo.model.User, querySpaceUid=<gen:1>, path=[com.comp.todo.model.Role.users].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.comp.todo.model.Role.users)
+          - SQL table alias mapping - users0_
+          - alias suffix - 0_
+          - suffixed key columns - {role_id6_2_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_2_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.comp.todo.model.User)
+                - SQL table alias mapping - users0_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_2_1_}
+
+2016-09-10 23:55:22.447::DEBUG org.hibernate.loader.collection.plan.CollectionLoader - Static select for collection com.comp.todo.model.Role.users: select users0_.role_id as role_id6_2_0_, users0_.id as id1_2_0_, users0_.id as id1_2_1_, users0_.email as email2_2_1_, users0_.first_name as first_na3_2_1_, users0_.last_name as last_nam4_2_1_, users0_.password as password5_2_1_, users0_.role_id as role_id6_2_1_ from USER users0_ where users0_.role_id=?
+2016-09-10 23:55:22.447::DEBUG org.hibernate.internal.SessionFactoryImpl - Instantiated session factory
+2016-09-10 23:55:22.527::WARN  org.springframework.web.context.support.XmlWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.filterChains': Cannot resolve reference to bean 'org.springframework.security.web.DefaultSecurityFilterChain#1' while setting bean property 'sourceList' with key [1]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.web.DefaultSecurityFilterChain#1': Cannot resolve reference to bean 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0' while setting constructor argument with key [2]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0': Cannot resolve reference to bean 'org.springframework.security.authentication.ProviderManager#0' while setting bean property 'authenticationManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authentication.ProviderManager#0': Cannot resolve reference to bean 'org.springframework.security.config.authentication.AuthenticationManagerFactoryBean#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.authentication.AuthenticationManagerFactoryBean#0': FactoryBean threw exception on object creation; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authenticationManager': Cannot resolve reference to bean 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0' while setting constructor argument with key [0]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0': Cannot resolve reference to bean 'customUserDetailsService' while setting bean property 'userDetailsService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customUserDetailsService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.comp.todo.dao.UserDao com.comp.todo.security.UserDetailsServiceImpl.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.comp.todo.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+2016-09-10 23:55:22.547::ERROR org.springframework.web.context.ContextLoader - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.filterChains': Cannot resolve reference to bean 'org.springframework.security.web.DefaultSecurityFilterChain#1' while setting bean property 'sourceList' with key [1]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.web.DefaultSecurityFilterChain#1': Cannot resolve reference to bean 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0' while setting constructor argument with key [2]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0': Cannot resolve reference to bean 'org.springframework.security.authentication.ProviderManager#0' while setting bean property 'authenticationManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authentication.ProviderManager#0': Cannot resolve reference to bean 'org.springframework.security.config.authentication.AuthenticationManagerFactoryBean#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.authentication.AuthenticationManagerFactoryBean#0': FactoryBean threw exception on object creation; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authenticationManager': Cannot resolve reference to bean 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0' while setting constructor argument with key [0]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0': Cannot resolve reference to bean 'customUserDetailsService' while setting bean property 'userDetailsService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customUserDetailsService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.comp.todo.dao.UserDao com.comp.todo.security.UserDetailsServiceImpl.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.comp.todo.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:382)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:157)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4135)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4630)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
+	at org.apache.catalina.startup.Embedded.start(Embedded.java:825)
+	at org.codehaus.mojo.tomcat.AbstractRunMojo.startContainer(AbstractRunMojo.java:558)
+	at org.codehaus.mojo.tomcat.AbstractRunMojo.execute(AbstractRunMojo.java:255)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.web.DefaultSecurityFilterChain#1': Cannot resolve reference to bean 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0' while setting constructor argument with key [2]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0': Cannot resolve reference to bean 'org.springframework.security.authentication.ProviderManager#0' while setting bean property 'authenticationManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authentication.ProviderManager#0': Cannot resolve reference to bean 'org.springframework.security.config.authentication.AuthenticationManagerFactoryBean#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.authentication.AuthenticationManagerFactoryBean#0': FactoryBean threw exception on object creation; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authenticationManager': Cannot resolve reference to bean 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0' while setting constructor argument with key [0]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0': Cannot resolve reference to bean 'customUserDetailsService' while setting bean property 'userDetailsService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customUserDetailsService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.comp.todo.dao.UserDao com.comp.todo.security.UserDetailsServiceImpl.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.comp.todo.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:382)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:157)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:634)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1143)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1046)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 48 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0': Cannot resolve reference to bean 'org.springframework.security.authentication.ProviderManager#0' while setting bean property 'authenticationManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authentication.ProviderManager#0': Cannot resolve reference to bean 'org.springframework.security.config.authentication.AuthenticationManagerFactoryBean#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.authentication.AuthenticationManagerFactoryBean#0': FactoryBean threw exception on object creation; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authenticationManager': Cannot resolve reference to bean 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0' while setting constructor argument with key [0]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0': Cannot resolve reference to bean 'customUserDetailsService' while setting bean property 'userDetailsService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customUserDetailsService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.comp.todo.dao.UserDao com.comp.todo.security.UserDetailsServiceImpl.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.comp.todo.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 62 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authentication.ProviderManager#0': Cannot resolve reference to bean 'org.springframework.security.config.authentication.AuthenticationManagerFactoryBean#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.authentication.AuthenticationManagerFactoryBean#0': FactoryBean threw exception on object creation; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authenticationManager': Cannot resolve reference to bean 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0' while setting constructor argument with key [0]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0': Cannot resolve reference to bean 'customUserDetailsService' while setting bean property 'userDetailsService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customUserDetailsService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.comp.todo.dao.UserDao com.comp.todo.security.UserDetailsServiceImpl.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.comp.todo.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:634)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1143)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1046)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 72 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.authentication.AuthenticationManagerFactoryBean#0': FactoryBean threw exception on object creation; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authenticationManager': Cannot resolve reference to bean 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0' while setting constructor argument with key [0]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0': Cannot resolve reference to bean 'customUserDetailsService' while setting bean property 'userDetailsService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customUserDetailsService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.comp.todo.dao.UserDao com.comp.todo.security.UserDetailsServiceImpl.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.comp.todo.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:175)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:103)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1590)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 84 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authenticationManager': Cannot resolve reference to bean 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0' while setting constructor argument with key [0]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0': Cannot resolve reference to bean 'customUserDetailsService' while setting bean property 'userDetailsService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customUserDetailsService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.comp.todo.dao.UserDao com.comp.todo.security.UserDetailsServiceImpl.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.comp.todo.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:382)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:157)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:634)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1143)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1046)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.security.config.authentication.AuthenticationManagerFactoryBean.getObject(AuthenticationManagerFactoryBean.java:28)
+	at org.springframework.security.config.authentication.AuthenticationManagerFactoryBean.getObject(AuthenticationManagerFactoryBean.java:20)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:168)
+	... 89 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.authentication.dao.DaoAuthenticationProvider#0': Cannot resolve reference to bean 'customUserDetailsService' while setting bean property 'userDetailsService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customUserDetailsService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.comp.todo.dao.UserDao com.comp.todo.security.UserDetailsServiceImpl.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.comp.todo.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 105 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customUserDetailsService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.comp.todo.dao.UserDao com.comp.todo.security.UserDetailsServiceImpl.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.comp.todo.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 115 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.comp.todo.dao.UserDao com.comp.todo.security.UserDetailsServiceImpl.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.comp.todo.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 123 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.comp.todo.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 125 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.comp.todo.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 136 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 138 more
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Unable to obtain JDBC Connection
+	at org.hibernate.tool.schema.internal.exec.AbstractJdbcConnectionContextImpl.getConnection(AbstractJdbcConnectionContextImpl.java:46)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:59)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTable(InformationExtractorJdbcDatabaseMetaDataImpl.java:271)
+	at org.hibernate.tool.schema.internal.exec.ImprovedDatabaseInformationImpl.getTableInformation(ImprovedDatabaseInformationImpl.java:109)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.performMigration(SchemaMigratorImpl.java:252)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:137)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:110)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:176)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:64)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:458)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:465)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:708)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:416)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:401)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 148 more
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Access denied for user 'root'@'localhost' (using password: YES))
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.tool.schema.internal.exec.AbstractJdbcConnectionContextImpl.getConnection(AbstractJdbcConnectionContextImpl.java:43)
+	... 165 more
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 170 more
