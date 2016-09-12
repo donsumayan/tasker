@@ -37,16 +37,20 @@ public class AuthTest {
 	
 	@Test
 	public void testLogin() {
-		String str = "";
+		final String email = "vincent@gmail.com";
+		final String password = "$2a$06$RG2qrvrrXVzoyWtgdpVC5OBQ7woFEY5JOFmTEljcW7zE9qweflgfS";
+		final String result = "{\"id\":1,\"firstName\":\"Vincent2\",\"lastName\":\"Montesclaros\",\"email\":\"vincent@gmail.com\",\"role\":{\"id\":1,\"name\":\"Admin\"}}";
+		
 		Map map = new HashMap();
-		Mockito.when(authController.login(map)).thenReturn(str);	// check if it performs correctly
-		assertEquals("", authController.login(map));
+		map.put("email", email);
+		map.put("password", password);
 		
-		Mockito.when(authService.login("", "")).thenReturn(str);	// check if it performs correctly
-		assertEquals("", authService.login("", ""));
+		Mockito.when(authController.login(map)).thenReturn(result);
+		assertEquals(result, authController.login(map));
 		
+		Mockito.when(authService.login(email, password)).thenReturn(result);
+		assertEquals(result, authService.login(email, password));
 		
-		authController.login(map);	// verify if it gets invoked	
-//		Mockito.verify(authService).login("",  "");
+		Mockito.verify(authService).login(email,  password);
 	}
 }
