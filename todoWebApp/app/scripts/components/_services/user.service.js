@@ -67,6 +67,7 @@
                 .catch(onFail);
 
             function onComplete(response) {
+                response.data.password=null;
                 return response.data;
             }
 
@@ -95,10 +96,12 @@
 
         function updateUser(user) {
             user.password = "";
-            user.role = {
-                "id": 2,
-                "name": "User"
-            };
+            if(!user.role){
+                user.role = {
+                    "id": 2,
+                    "name": "User"
+                };
+            }
             $http.defaults.headers.common.Authorization = $cookies.get('Auth');
             return $http.put(url + 'users/' + user.id, user)
                 .then(onComplete)

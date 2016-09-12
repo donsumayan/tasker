@@ -8,6 +8,7 @@
         $rootScope.$emit('updateHeader', 'admin');
         var vm = this;
         var user = $cookies.getObject('user');
+        vm.user=user;
         
         if(user.role.id===1){
             // countTodos();
@@ -18,8 +19,9 @@
             );
         }
         else{
-            $state.go('main-default.dashboard');
+            $state.go('main-default.home');
         }
+
         vm.admin = user;
         vm.users = [];
         vm.todoCount = 0;
@@ -45,7 +47,6 @@
                 vm.users[index].removing=true;
                 userservice.deleteUser(id).then(
                     function(data) {
-                        console.log(data);
                         if (data.status===200) {
                             vm.users.splice(index, 1);
                         }

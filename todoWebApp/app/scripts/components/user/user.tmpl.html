@@ -5,7 +5,7 @@
         </div>
         <div flex layout="column">
             <div flex class="userDetails" layout="column">
-                <div flex class="userDetailsHead">Details:
+                <div flex class="userDetailsHead"> {{vm.syncing}} Details: 
                     <i class="userEdit fa fa-edit" ng-hide="uform.$visible" ng-click="uform.$show()"></i>
                     <i class="userEdit saveBtn fa fa-floppy-o" ng-show="uform.$visible"  ng-click="uform.$submit() "></i>
                     <form hidden editable-form name="uform" onaftersave="vm.sync($data)">
@@ -46,7 +46,7 @@
                     <button class="prompt" ng-click="vm.promptDelete=false">Nevermind</button>
                 </div>
             </div>
-            <div class="label" ng-show="vm.user.role.id===1" flex><a ui-sref="main-default.admin"><span class="goToAdmin">Go to Administrator page</span></div>
+            <div class="label" ng-show="vm.user.role.id===1" flex><a ui-sref="main-default.admin"><span class="goToAdmin">Go to Administrator page</span></a></div>
         </div>
     </div>
 </div>

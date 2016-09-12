@@ -5,10 +5,19 @@
         .module('todo.components.common.header')
         .controller('headerController', headerController);
 
-    function headerController($scope, $rootScope, $cookies, $state, constants, globals) {
+    function headerController($scope, $rootScope, $cookies, $state,userservice,  constants, globals) {
         var vm = this;
         vm.header = constants.APP_NAME;
-        vm.user = $cookies.getObject('user');
+        var user=  $cookies.getObject('user');
+        vm.user = user;
+
+        userservice.getUser(user.id).then(
+            function(data) {
+                user=data;
+                vm.user=data;
+                $cookies.putObject('user',user);
+            }
+        );
         vm.selected = globals.getState;
         vm.subSelected = 'all';
 
